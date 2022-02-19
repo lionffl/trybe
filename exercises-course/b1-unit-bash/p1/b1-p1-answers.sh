@@ -80,4 +80,75 @@ tail -4 skills.txt
 
 # Q16: Delete all the txt files
 
-rm ~/unix_test/*.txt
+rm ~/unix_test/*.tx
+
+
+# Note: The exercises in app.betrybe.com course are organized in block 1 / part 1 / part I & part II. Here, in this document, I will organize all the part 1 exercises (part I & II from course).
+# Having said that, the question number 16 here is equivalent to the part II question 1 in the app.betrybe.com course.
+
+
+# Q16: Use the curl command to download a list with countries and save it in `countries.txt`
+
+curl -o countries.txt "https://gist.githubusercontent.com/kalinchernev/486393efcca01623b18d/raw/daa24c9fea66afb7d68f8d69f0c4b8eeb9406e83/countries"
+
+# Q17: Show the `countries.txt` content
+
+cat countries.txt
+
+# Q18: Show, organized by page, the content of `countries.txt` file
+
+less countries.txt
+
+# Q19: Show again, organized by page, the content of `countries.txt` and enter a command to find `Zambia`
+
+less countries.txt
+/Zambia
+
+# Q20: Search for `Brazil` in `countries.txt`
+
+grep Brazil countries.txt
+
+# Q21: Search for `brazil` (lower case) in `countries.txt`
+
+grep -i brazil countries.txt
+
+# Q22: Create a file named `phrases.txt` and write at will
+
+cat phrases.txt
+"A cornered fox is more dangerous than a jackal"
+"I love dogs"
+"But I love cais even more"
+"CTRL + C"
+
+# Q23: Search for phrase that DOES NOT contains the word `fox`
+
+grep -v fox phrases.txt
+
+# Q24: Count the number of words in `phrases.txt`
+
+wc -w phrases.txt
+
+# Q25: Count the number of lines in `phrases.txt`
+
+wc -l phrases.txt
+
+# Q26: Create files named `empty.tbt` and `empty.pdf`
+
+touch empty.tbt
+touch empty.pdf
+
+# Q27: List all the files in `unix_tests` directory
+
+ls ~/unix_tests
+
+# Q28: List all the files that has .txt extension
+
+ls *.txt
+
+# Q29: List all the files that has .tbt or .txt extension
+
+ls *.txt *.tbt
+
+# Q30: Open the manual for `ls` command
+
+man ls
