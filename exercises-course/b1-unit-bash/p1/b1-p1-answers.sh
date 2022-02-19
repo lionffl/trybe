@@ -118,7 +118,7 @@ cat phrases.txt
 "A cornered fox is more dangerous than a jackal"
 "I love dogs"
 "But I love cais even more"
-"CTRL + C"
+^C
 
 # Q23: Search for phrase that DOES NOT contains the word `fox`
 
