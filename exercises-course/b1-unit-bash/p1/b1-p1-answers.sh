@@ -59,7 +59,7 @@ rmdir backup
 
 clear
 
-# Q14: Make a text file named `skills.txt` and write, one word for line, the follow content: Internet, Unix, Bash, HTML, CSS, JavaScript, React, SQL. Save and show on terminal the firt 5 skills
+# Q14: Make a text file named `skills.txt` and write, one word per line, the follow content: Internet, Unix, Bash, HTML, CSS, JavaScript, React, SQL. Save the file and show on terminal the firt 5 skills
 
 touch skills.txt
 echo Internet | cat >> skills.txt
@@ -71,8 +71,20 @@ echo JavaScript | cat >> skills.txt
 echo React | cat >> skills.txt
 echo SQL | cat >> skills.txt
 
-head -5 skills.txt
+# or
 
+cat > skills.txt
+Internet
+Unix
+Bash
+HTML
+CSS
+JavaScript
+React
+SQL
+^C
+
+head -5 skills.txt
 
 # Q15: Using the file `skills.txt` created in the last question, now show the last 4 skills
 
@@ -114,10 +126,10 @@ grep -i brazil countries.txt
 
 # Q22: Create a file named `phrases.txt` and write at will
 
-cat phrases.txt
-"A cornered fox is more dangerous than a jackal"
-"I love dogs"
-"But I love cais even more"
+cat > phrases.txt
+A cornered fox is more dangerous than a jackal
+I love dogs
+But I love cais even more
 ^C
 
 # Q23: Search for phrase that DOES NOT contains the word `fox`
