@@ -1,4 +1,8 @@
-Here you will find my answers for the exercises of the Web Development Course from Trybe
+Here you will find the answers of Web Development Course exercises from Trybe 
+
+Student: Felipe Lima (lionffl@gmail.com)
+Class: 21B
+Start date: 14/02/2022
 
 @About Trybe
 
