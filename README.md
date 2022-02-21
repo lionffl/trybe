@@ -1,1 +1,5 @@
-This is the repository that contains the completed exercises during the Trybe Web Development Course
+Here you will find the exercises of the Web Development Course from Trybe
+
+@About Trybe
+
+https://ajuda.betrybe.com/hc/pt-br/articles/360056299454-O-que-a-Trybe-%C3%A9-
