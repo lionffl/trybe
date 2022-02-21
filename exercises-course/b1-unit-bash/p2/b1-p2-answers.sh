@@ -66,4 +66,63 @@ sort bunch_of_things.txt
 # Note: The exercises in app.betrybe.com course are organized in block 1 / part 1 / part I & part II. Here, in this document, I will organize all the part 2 exercises (part I, II and III from course).
 # Having said that, the question number 12 here is equivalent to the part II question 1 in the app.betrybe.com course, the question number 17 here is equivalent to the part III question 1 etc.
 
+# Q16: Go to the `unix_tests` director
 
+cd unix_tests
+
+# Q17: List the permissions
+
+ls -l
+
+# Q18: Change the permission of `bunch_of_things.txt` to every user can read and write
+
+chmod a+rw bunch_of_things.txt
+
+# Q19: Remove the write permission from all users of the `bunch_of_things.txt` file
+
+chmod a-w bunch_of_things.txt
+
+# Q20: Undo all the permissions changes done in the `bunch_of_things.txt` file
+
+chmod go-w bunch_of_things.txt
+
+# Q21: List all the process
+
+ps
+
+# Q22: Use the sleep command with 30 seconds
+
+sleep 30 &
+
+# Q23: Get the PID from the process list and stop the sleep process
+
+ps
+
+pkill "PID"
+
+# Q24: Run the sleep command again and set to it run in background
+
+sleep 30
+bg
+
+# Q25: Use the sleep command with 300 seconds
+
+sleep 300 &
+
+# Q26: Use another 2 sleep commands, with 200 and 100 seconds, running in the foreground and suspend both
+
+sleep 200
+^Z
+sleep 100
+^Z
+
+# Q27: Suspend the 300 seconds sleep command
+
+jobs
+pkill sleep
+
+# Q28: Stop all the sleep process
+
+ps
+pkill "PID"
+pkill "PID"
