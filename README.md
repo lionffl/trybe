@@ -1,4 +1,4 @@
-Here you will find the exercises of the Web Development Course from Trybe
+Here you will find my answers for the exercises of the Web Development Course from Trybe
 
 @About Trybe
 
