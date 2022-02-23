@@ -1,4 +1,4 @@
-Here you will find the answers of Web Development Course exercises from Trybe 
+Here you will find the exercises that I did in Web Development Course from Trybe 
 
 Student: Felipe Lima (lionffl@gmail.com)
 Class: 21B
