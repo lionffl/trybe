@@ -1,1 +1,1 @@
-Exercises from block 1 - Unit & Bash
+Exercises from block 3 - HTML & CSS
