@@ -1,0 +1,12 @@
+body {
+    margin: 3px;
+    padding: 3px;
+}
+
+.content {
+    padding: 5px;
+    margin: 5px;
+    background-color: lightgrey;
+    display: inline-block;
+    border-radius: 5px;
+}
