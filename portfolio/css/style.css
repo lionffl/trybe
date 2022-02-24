@@ -1,6 +1,7 @@
 body {
     margin: 3px;
     padding: 3px;
+    background-color: antiquewhite;
 }
 
 .content {
@@ -10,3 +11,25 @@ body {
     display: inline-block;
     border-radius: 5px;
 }
+
+.myname {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: small;
+}
+
+.linux {
+    font-size: 30px;
+}
+
+.html-css-js {
+    font-size: 25px;
+}
+
+.internet {
+    font-size: 20px;
+}
+
+.softskills {
+    font-size: 15px;
+}
+
