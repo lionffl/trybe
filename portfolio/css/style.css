@@ -5,9 +5,17 @@
   body {
     margin: 3px;
     padding: 3px;
-    background-color: antiquewhite;
+    font-family: cursive; 
 }
 
+.all {
+    height: auto;
+    width: 900px;
+    margin: 5px;
+    padding: 10px;
+    background-color: antiquewhite;
+    border-radius: 10px;
+}
 .content {
     padding: 5px;
     margin: 5px;
@@ -16,9 +24,9 @@
     border-radius: 5px;
 }
 
-.myname {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: small;
+.title {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
 }
 
 .linux {
