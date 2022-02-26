@@ -1,0 +1,27 @@
+.caixa {
+    color: white;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: top;
+}
+  
+.width-and-height {
+    height: 50px;
+    width: 50px;
+}
+  
+  /* set a 20px padding on the class below to change B, C and D items. */
+.padding {
+    padding: 20px;
+}
+  /* set a 30px margin on the class below to change C and D items. */
+ 
+.margin {
+    margin: 30px;
+}
+  
+/* set a 5px solid black border  on the class below to change D item. */ 
+.border {
+    border: 5px solid black;
+}

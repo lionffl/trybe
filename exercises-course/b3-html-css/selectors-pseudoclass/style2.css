@@ -1,0 +1,29 @@
+div:hover {
+    border: 5px solid;
+}
+
+.primary {
+    background-color: aqua;
+}
+
+.secondary {
+    background-color: greenyellow;
+}
+
+.comp {
+    background-color: orange;
+    padding: 10px;
+}
+
+.dark {
+    background-color: brown;
+}
+
+.bright {
+    background-color: lightcyan;
+}
+
+.primary,.comp,.bright {
+    font-family: monospace;
+    font-style: italic;
+}
