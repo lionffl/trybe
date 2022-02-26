@@ -1,0 +1,64 @@
+ol li {
+    background-color: yellow;
+}
+
+/* only on even childs */
+
+ol li:nth-child(2n) {
+    color: green;
+}
+
+/* only on odd childs  */
+
+ol li:nth-child(2n+1) {
+    text-transform: uppercase;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: red;
+}
+
+li {
+    font-size: 20px;
+}
+
+li em {
+    font-weight: bold;
+}
+
+/* first 3 items on a list */
+
+.coding-languages li:nth-child(-n+3) {
+    color: blue;
+}
+
+/* an item list that contains the string "java" on its class attr */
+
+li[class*="java"] {
+    background-color: salmon;
+}
+
+.stack:hover,.w3:hover,.mdn:hover,.dd:hover,.trybe:hover {
+    font-weight: bold;
+}
+
+.stack:hover a {
+    color: orange;
+}
+
+.w3:hover a {
+    color: green;
+}
+
+.mdn:hover a {
+    color: black;
+}
+
+.dd:hover a {
+    color: yellow;
+}
+
+.trybe:hover a {
+    color: lime;
+}
+
