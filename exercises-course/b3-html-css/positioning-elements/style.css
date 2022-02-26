@@ -1,3 +1,33 @@
+/* 
+
+Use the CSS settings below as a reference and:
+
+1) Put goomba below Mario
+2) Put the text inside the baloon
+3) Put the baloon position as a Bowser speach
+
+.super-mario {
+  width: 200px;
+}
+
+.goomba {
+  width: 100px;
+}
+
+.baloon {
+
+}
+
+.speach {
+  font-size: 25px;
+}
+
+.bowser {
+  width: 200px;
+}
+
+*/
+
 .super-mario {
     width: 200px;
     position: absolute;
