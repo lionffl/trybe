@@ -1,3 +1,5 @@
+/* CSS reset default settings */
+
 * {
     box-sizing: border-box;
 }
@@ -5,8 +7,9 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: monospace; 
 }
+
+/* end of CSS reset default settings */
 
 .all {
     height: auto;
@@ -15,6 +18,7 @@ body {
     padding: 10px;
     background-color: antiquewhite;
     border-radius: 10px;
+    font-family: monospace; 
 }
 
 .profile-pic {
@@ -58,4 +62,3 @@ body {
 .softskills {
     font-size: 15px;
 }
-
