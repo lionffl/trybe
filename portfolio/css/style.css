@@ -1,10 +1,10 @@
 * {
     box-sizing: border-box;
-  }
+}
 
 body {
-    margin: 3px;
-    padding: 3px;
+    margin: 0;
+    padding: 0;
     font-family: monospace; 
 }
 
@@ -16,17 +16,31 @@ body {
     background-color: antiquewhite;
     border-radius: 10px;
 }
+
+.profile-pic {
+    float: left;
+    margin: 15px 15px;
+    border: 15px transparent;
+    border-radius: 5px;
+    /* margin-top: 12px; */
+}
+
 .content {
     padding: 5px;
     margin: 5px;
     background-color: lightgrey;
-    display: inline-block;
+    /* display: inline-block; */
     border-radius: 5px;
 }
 
-.title {
-   font-family: Verdana, Geneva, Tahoma, sans-serif;
+.author {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: medium;
+    text-align: center;
+}
+
+.skills li:nth-child(2n+1) {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .linux {
