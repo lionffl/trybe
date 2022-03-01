@@ -15,7 +15,7 @@ body {
     height: auto;
     width: 800px;
     border-radius: 4px;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Header settings */
@@ -39,19 +39,19 @@ body {
 }
 
 .main-menu-pic {
-    display: flex;
-    flex-wrap: wrap;
+    display: inline-flex;
 }
 .profile-pic {
     width: 150px;
-    flex: 20%;
     border-radius: 5px;
+    margin-left: 15px;
 }
 
 /* Main menu settings */
 
 .main-menu {
-    flex: 80%;
+   margin-left: 90%;
+   margin-top: 5%;
 }
 
 .main-menu ul {
@@ -115,8 +115,24 @@ section {
     text-align: justify;
 }
 
+.privacy-policy p {
+    text-indent: 30px;
+    text-align: justify;
+}
+
+.privacy-policy li {
+    padding: 5px 0 5px;
+    text-align: justify;
+}
+
 .trybe {
     color: green;
+    font-weight: 1000;
+    text-transform: lowercase;
+}
+
+a {
+    color: mediumblue;
 }
 
 /* Side menu settings */
