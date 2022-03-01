@@ -1,3 +1,4 @@
+/* Structure settings */
 * {
     box-sizing: border-box;
 }
@@ -17,6 +18,8 @@ body {
     font-family: sans-serif;
 }
 
+/* Header settings */
+
 .header {
     margin: auto;
     padding: auto;
@@ -28,9 +31,11 @@ body {
     padding: 5px;
     padding-bottom: 20px;
     text-align: center;
-    display: block;
-    width: 100%;
     border-bottom: 1px ridge;
+    font-size: larger;
+    font-style: italic;
+    font-weight: bold;
+    font-family: serif;
 }
 
 .main-menu-pic {
@@ -101,6 +106,18 @@ section {
     padding-left: 20px;
 }
 
+.skills-list li {
+    text-indent: 10px;
+}
+
+.content-section {
+    text-indent: 30px;
+    text-align: justify;
+}
+
+.trybe {
+    color: green;
+}
 
 /* Side menu settings */
 
