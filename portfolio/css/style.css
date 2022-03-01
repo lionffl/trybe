@@ -1,5 +1,4 @@
-/* CSS reset default settings */
-
+/* Structure settings */
 * {
     box-sizing: border-box;
 }
@@ -9,56 +8,171 @@ body {
     padding: 0;
 }
 
-/* end of CSS reset default settings */
-
 .all {
-    height: auto;
-    width: 900px;
-    margin: 5px;
+    margin: 10px;
     padding: 10px;
-    background-color: antiquewhite;
-    border-radius: 10px;
-    font-family: monospace; 
+    background-color:whitesmoke;
+    height: auto;
+    width: 800px;
+    border-radius: 4px;
+    font-family: sans-serif;
 }
 
+/* Header settings */
+
+.header {
+    margin: auto;
+    padding: auto;
+}
+
+.title-main {
+    margin: 5px;
+    margin-bottom: 20px;
+    padding: 5px;
+    padding-bottom: 20px;
+    text-align: center;
+    border-bottom: 1px ridge;
+    font-size: larger;
+    font-style: italic;
+    font-weight: bold;
+    font-family: serif;
+}
+
+.main-menu-pic {
+    display: flex;
+    flex-wrap: wrap;
+}
 .profile-pic {
-    float: left;
-    margin: 15px 15px;
-    border: 15px transparent;
+    width: 150px;
+    flex: 20%;
     border-radius: 5px;
-    /* margin-top: 12px; */
+}
+
+/* Main menu settings */
+
+.main-menu {
+    flex: 80%;
+}
+
+.main-menu ul {
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+}
+
+.main-menu li {
+    margin: 5px;
+    padding-right: 20px;
+    padding-left: 15px;
+    border-right: 1px solid;
+}
+
+
+.main-menu li:nth-child(2) {
+    border: none;
+}
+
+/* Main content settings */
+
+.main {
+    display: flex;
+    border-top: 1px ridge;
+    margin-top: 20px;
 }
 
 .content {
-    padding: 5px;
     margin: 5px;
-    background-color: lightgrey;
-    /* display: inline-block; */
-    border-radius: 5px;
+    padding: 5px;
+    /* border: 5px solid black; */
+    width: 75%;
 }
 
-.author {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: medium;
+section {
+    margin: 5px;
+    padding: 5px;
+    /* border: 5px solid black; */
+}
+.title-section {
+    display: inline;
+    border-bottom: 1px solid;
+    font-size: large;
+    font-weight: bold;
+}
+
+.skills-list {
+    list-style: square;
+    padding-left: 20px;
+}
+
+.skills-list li {
+    text-indent: 10px;
+}
+
+.content-section {
+    text-indent: 30px;
+    text-align: justify;
+}
+
+.trybe {
+    color: green;
+}
+
+/* Side menu settings */
+
+.right-menu {
+    width: 25%;
+    margin: 5px;
+    padding: 5px;
+    padding-top: 10px;
+    border-left: 1px ridge;
     text-align: center;
 }
 
-.skills li:nth-child(2n+1) {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.right-menu ul {
+    list-style: none;
+    padding: 3px;
+    margin: 3px;
+    text-align: left;
 }
 
-.linux {
-    font-size: 30px;
+.right-menu li {
+    padding: 5px;
+    margin: 5px;
+    font-size: small;
 }
 
-.html-css-js {
-    font-size: 25px;
+/* Footer settings */
+
+.footer {
+    margin: 5px;
+    padding: 5px;
+    border-top: 1px ridge;
+    display: flex;
+    /* flex-wrap: wrap; */
 }
 
-.internet {
-    font-size: 20px;
+.footer-menu ul {
+    list-style: none;
+    font-size: x-small;
+    /* flex: 20%; */
+    padding-left: 0;
 }
 
-.softskills {
-    font-size: 15px;
+.footer-menu li {
+    padding-bottom: 5px;
 }
+
+.contact ul {
+    list-style: none;
+    font-size: smaller;
+    /* flex: 80%; */
+    margin-left: 300px;
+}
+
+.contact li {
+    padding-bottom: 5px;
+}
+
+    

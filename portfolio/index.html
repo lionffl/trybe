@@ -4,52 +4,76 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Web - Felipe Lima</title>
     <link rel="stylesheet" href="./css/style.css">
+    <title>Felipe Lima</title>
 </head>
 <body>
-    <div class="all"> <!-- div that contains all useful content of the page -->  
-        <h2>Index</h2>
-            <ul>
-                    <li><a href="#index-me"> Sobre mim</a></li>
-                    <li><a href="#index-skills"> Habilidades</a></li>
-                    <li><a href="#index-contacts"> Contatos</a></li>
-                </ul>
-        
-        <div class="author">
-            <h3>Felipe de Franca Lima</h3>
-        </div> 
-
-        <div class="about-me"></div>
-            <h2 id="index-me">Sobre mim</h2>
-        <div class="profile-frame">
-            <img class="profile-pic" src="./img/me.jpeg" alt="felipe lima photo" width="200">
-        </div>
-        <div class="content">
-            <p>
-                Tenho 33 anos e moro em <strong>Fortaleza/CE</strong>. Tecnologia esta' presente na minha vida desde a infancia, entao ja tive ICQ, usei e trabalhei voluntariamente no suporte de uma rede IRC (alguem ai' lembra da BRASnet?) e estive envolvido em `servidores alternativos` <s>piratas</s> de Ragnarok Online no inicio dos anos 2000.
-            </p>    
-            <p>    
-                Conclui o curso de Geografia em 2010 e fiz cursos de especializacao e MBA relacionados a minha area de atuacao (gestao ambiental, financas, gestao de projetos). Ate 2022, a tecnologia foi apenas um hobby e/ou <em>atividade secundaria</em>, mas isso pode mudar agora.
-            </p>    
-            <p>    
-            Espero concluir o curso na Trybe para, assim como os demais cursos que fiz, desenvolver-me profissionalmente, pois desenvolvimento de software (programacao) e' uma ferramenta de trabalho do <s>futuro</s> <b>presente</b>, seja ele de qual area for, alem de tornar possivel uma completa transicao de carreira.
-            </p>
-        </div>
-        <div class="section">
-            <h2 id="index-skills">Habilidades</h2>
-                <ul class="skills">
-                    <li class="linux">Linux/bash basico</li>
-                    <li class="html-css-js">HTML, CSS e JavaScript basicos</li>
-                    <li class="internet">Internet, AWS, FTP, SSH basicos</li>
-                    <li class="softskill"><strong>Focado em resultado</strong></li>
-                </ul>
-            <h2 id="index-contacts">Contatos</h2>
+    <div class="all">
+        <header class="header">
+            <div class="title-main"> Felipe Lima</div>
+            <div class="main-menu-pic">
+                <img class="profile-pic" src="https://lionffl.github.io/trybe/portfolio/img/me.jpeg" alt="my profile picture">
+                <nav class="main-menu">
                 <ul>
-                    <li> <a href="https://www.linkedin.com/in/felipe-flima/" target="_blank">Linkedin</a></li>
-                    <li> <a href="https://github.com/lionffl" target="_blank"> Github</a></li>
+                    <a href="https://lionffl.github.io/trybe/portfolio/"><li>Home</li></a>
+                    <a href="#about"><li>About</li></a>
                 </ul>
-        </div>
+                </nav>
+            </div>
+    </header>
+        <main class="main">
+            <article class="content">
+                <section>
+                   <title id="about" class="title-section"> Short presentation</title>
+                    <p class="content-section">
+                      I am 33 years old and live in Brazil, Ceara, Fortaleza. I have bachelor degree in Geography (concluded in 2010) and developed my professional career on real state, land survey and engineering projects related to renewable energy and power transmission lines.</p>
+                </section>
+                <section>
+                    <title class="title-section"> IT Background</title>
+                    <p class="content-section">
+                      I started to use Internet in the late 90s and one of my first experiences was on IRC. At <a href="http://www.brasnet.org/2007/05/era-uma-vez-o-irc-brasileiro.html" target="_blank">BRASnet</a>, which was, on it's prime, one of the 10 biggest network in the world, I worked voluntary in the support team, answering questions on the official support channel (#ajuda), writting documentation to standardize the user service, manuals and developing processes to improve the customer (user) service in general.</p>
+                    <p class="content-section">Maybe not so proudly, I worked as Game Master in a Ragnarok Online Private Server and as Server Admin afterwards. However, I could learn a lot on this experience, because: 1) I had my first linux contact (Ubuntu birth), 2) started to work with SSH, FTP, domain, host and 3) the people I met still with me until nowdays in others projects.</p>
+                    <p class="content-section">In short, I have some knowledge in linux, FTP, SSH, have some experience with AWS (EC2, Route 53) and now I am studying web development at <a class="trybe" href="https://betrybe.com" target="_blank">Trybe</a>.</p>    
+                </section>
+                <section>
+                    <title class="title-section"> My goal</title>
+                    <p class="content-section">
+                      Since 2021 I decided to study and learn web development by myself. Working in technology area is my medium-long term goal and, this year (2022), I have found Trybe to help me to achieve that.  
+                </section>
+                <section>
+                    <title class="title-section"> Skills</title>
+                    <ul class="skills-list content-section">
+                        <li>Linux & bash - basic level</li>
+                        <li>Git & Github - basic level</li>
+                        <li>HTML, CSS & JavaScript - basic level</li>
+                        <li>AWS, FTP, SSH - basic level</li>
+                    </ul>
+                </section>
+            </article>
+            <aside class="right-menu">Contact
+                <ul class="sidebar-list">
+                    <a href="https://www.linkedin.com/in/felipe-flima" target="_blank"><li>Linkedin</li></a>
+                    <a href="https://github.com/lionffl" target="_blank"><li>Github</li></a>
+                </ul>
+            </aside>
+        </main>
+        <footer class="footer">
+            <nav class="footer-menu">
+                <ul>
+                    <li>Disclaimer</li>
+                    <li>License</li>
+                    <li>Privacy Policy</li>
+                </ul>
+            </nav>
+            <nav class="contact">
+                <ul>
+                    <a href="https://www.facebook.com/felipeliondartlima" target="_blank"><li>Facebook</li></a>
+                    <a href="https://open.spotify.com/user/liondartffl" target="_blank"><li>Spotify</li></a>
+                    <a href="https://github.com/lionffl/exercises/tree/main/javascript/projects/first" target="_blank"><li>My first "app"</li></a>
+                    <a href="https://www.hackerrank.com/lionffl" target="_blank"><li>Hacker Rank</li></a>
+                </ul>
+            </nav>
+        </footer>
     </div>
 </body>
 </html>
