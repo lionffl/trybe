@@ -1,0 +1,195 @@
+/* CSS structural and global settings */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: mediumblue;
+}
+
+h3 {
+    text-decoration: underline 2px;
+}
+
+.all {
+    margin: 15px;
+    padding: 10px;
+    width: 1200px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: whitesmoke;
+    border-radius: 4px;
+}
+
+/* CSS header settings */
+
+header {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border-bottom: 1px ridge;
+}
+
+/* CSS main menu settings */
+
+.main-menu {
+    margin: 80px 50px;
+}
+
+.main-menu ul {
+    text-align: right;
+}
+
+.main-menu li {
+    display: inline;
+    padding: 0px 20px;
+    font-size: larger;
+    border-right: 1px solid black;
+    color: black;
+}
+
+.main-menu li:last-child {
+    border: none;
+}
+
+/* CSS Main content settings */
+
+main {
+    display: flex;
+    border-top: 1px ridge;
+}
+
+.content {
+    width: 70%;
+    margin-right: 50px;
+}
+
+.content p {
+    text-indent: 30px;
+    text-align: justify;
+}
+
+.right-bar {
+    width: 30%;
+    margin-top: 50px;
+}
+
+.content .formal-presentation img {
+    width: 300px;
+}
+
+.formal-presentation {
+    float: right;
+}
+
+.content .behaviour img {
+    width: 300px;
+}
+
+.behaviour {
+    float: left;
+}
+
+.content .aquarium img {
+    width: 300px;
+}
+
+.aquarium {
+    float: left;
+}
+
+.content .eyes img {
+    width: 300px;
+}
+
+.eyes {
+    float: left;
+}
+
+.content .strike img {
+    width: 300px;
+}
+
+.strike {
+    float: right;
+}
+
+figcaption {
+    font-style: italic;
+    text-align: center;
+    font-size: small;
+}
+
+/* CSS aside settings */
+
+.right-bar {
+    border-left: 1px ridge;
+}
+
+.right-bar table,.table-title {
+    padding-left: 70px;
+}
+
+.table-title {
+    display: block;
+    font-size: large;
+    font-weight: bolder;
+    padding-bottom: 10px;
+}
+
+.right-bar td {
+    font-weight: bold;
+    font-size: small;
+    padding-top: 5px;
+}
+
+.right-bar td:last-child {
+    padding-left: 30px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+.trivia-title {
+    display: block;
+    text-align: center;
+    padding-top: 20px;
+    font-size: large;
+    font-weight: bolder;
+}
+
+.right-bar-links li {
+    list-style: none;
+    padding: 5px 0;
+}
+
+/* CSS Footer settings */
+
+footer {
+    border-top: 1px ridge;
+}
+
+.references {
+    display: flex;
+}
+
+.references ul {
+    padding: 2px;
+    margin: 2px;
+}
+.references li {
+    font-size: smaller;
+    list-style: none;
+    padding: 2px;
+}
+
+.author {
+    margin-top: 5px;
+    text-align: center;
+    font-size: x-small;
+    font-style: italic;
+    border-top: 1px ridge;
+}
