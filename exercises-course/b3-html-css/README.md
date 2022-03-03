@@ -1,1 +1,1 @@
-Exercises from block 3 - HTML & CSS
+Exercises from block 3 - HTML & CSS.
