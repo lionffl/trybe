@@ -20,11 +20,6 @@ body {
 
 /* Header settings */
 
-.header {
-    margin: auto;
-    padding: auto;
-}
-
 .title-main {
     margin: 5px;
     margin-bottom: 20px;
@@ -39,7 +34,8 @@ body {
 }
 
 .main-menu-pic {
-    display: inline-flex;
+    display: flex;
+    width: 100%;
 }
 .profile-pic {
     width: 150px;
@@ -49,29 +45,15 @@ body {
 
 /* Main menu settings */
 
-.main-menu {
-   margin-left: 90%;
-   margin-top: 5%;
+.nav-menu ul {
+    margin-left: 400px;
+    margin-top: 60px;
 }
 
-.main-menu ul {
-    margin: 20px;
-    padding: 20px;
-    display: flex;
-    justify-content: flex-end;
-    list-style: none;
-}
-
-.main-menu li {
-    margin: 5px;
-    padding-right: 20px;
-    padding-left: 15px;
-    border-right: 1px solid;
-}
-
-
-.main-menu li:nth-child(2) {
-    border: none;
+.nav-menu li {
+  display: inline;
+  padding-left: 50px;
+  font-size: large;
 }
 
 /* Main content settings */
