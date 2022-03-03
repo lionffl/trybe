@@ -26,6 +26,11 @@ h3 {
     border-radius: 3px;
 }
 
+.trybe {
+    color: green;
+    font-weight: 1000;
+    text-transform: lowercase;
+    
 /* CSS header settings */
 
 header {
