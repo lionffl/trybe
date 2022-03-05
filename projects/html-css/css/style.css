@@ -78,6 +78,11 @@ h1,h2,h3 {
     width: 100%;
 }
 
+.mid-content p {
+    text-indent: 30px;
+    text-align: justify;
+}
+
 .lado-esquerdo,.lado-direito {
     width: 20%;
     display: inline;
@@ -112,6 +117,11 @@ h1,h2,h3 {
 
 .secondary-content {
     padding: 0 261px;
+}
+
+.secondary-content p {
+    text-indent: 30px;
+    text-align: justify;
 }
 
 /* CSS Footer Settings */
