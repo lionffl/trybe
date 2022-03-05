@@ -1,0 +1,143 @@
+/* CSS Stuctural and general settings */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: rgb(253, 251, 251);
+}
+
+.all {
+    width: 1366px;
+    height: auto;
+    background-color: whitesmoke;
+    border-radius: 4px;
+    margin: 10px;
+    padding: 10px;
+}
+
+a {
+    color: mediumblue;
+}
+
+td {
+    padding-left: 5px;
+}
+
+h1,h2,h3 {
+    text-decoration: underline 2px;
+}
+
+.trybe {
+    color: green;
+    text-transform: lowercase;
+    font-weight: 950;
+}
+
+/* CSS Header settigns */
+
+#cabecalho {
+    width: 90%;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+}
+
+#titulo {
+    width: 80%;
+    text-align: center;
+    font-family: Georgia, serif;
+}
+
+.frame {
+    width: 80%;
+    text-align: center;
+}
+
+#minha_foto {
+    width: 150px;
+    border-radius: 5px;
+}
+
+.about-me {
+    display: inline-block;
+    width: max-content;
+    text-align: left;
+}
+
+/* CSS Main Settings */
+
+.content {
+    margin-top: 300px;
+    display: flex;
+    width: 100%;
+}
+
+.lado-esquerdo,.lado-direito {
+    width: 20%;
+    display: inline;
+}
+
+.mid-content {
+    width: 60%;
+}
+
+#licoes_aprendidas,#licoes_a_aprender {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.5;
+    font-size: medium;
+}
+
+#licoes_a_aprender li {
+    list-style: none;
+}
+
+#licoes_a_aprender li,#licoes_aprendidas li {
+    font-size: small;
+}
+
+.title-list {
+    padding-bottom: 10px;
+    display: inline-block;
+    font-weight: 700;
+    text-decoration: underline 2px;
+}
+
+/* CSS Aside-Bottom Settings */
+
+.secondary-content {
+    padding: 0 261px;
+}
+
+/* CSS Footer Settings */
+
+#rodape {
+    text-align: center;
+    font-size: small;
+    font-style: italic;
+}
+
+.social-media {
+   margin-right: 40px;
+}
+
+.social-media ul {
+    list-style: none;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 1px;
+}
+
+.social-media li {
+    display: inline;
+}
+
+.author {
+    display: block;
+    margin-top: 50px;
+}
