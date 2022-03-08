@@ -278,7 +278,7 @@ console.log (`Tax Ratio: ${taxRatio}.`) // Debug check
 
 // Calculating Net Salary
 
-if (taxRatio === 1) {
+if (taxRatio === 1) { // IR free check
     salaryNet = salaryAfterSocial;
 } else { salaryNet = salaryAfterSocial - ((salaryAfterSocial * taxRatio)-taxQuota) }
 
