@@ -100,7 +100,7 @@ switch (result) {
 
 let chessPiece = "biSHop";
 
-if (chessPiece.toLocaleLowerCase() === "bishop") {
+if (chessPiece.toLowerCase() === "bishop") {
     console.log("Diagonals.")
 }
 
