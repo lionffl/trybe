@@ -85,6 +85,3 @@ console.log(arrayOfNumbers);
 for (i = 0; i < arrayOfNumbers.length; i++) {
     console.log(arrayOfNumbers[i] / 2);
 }
-
-
-
