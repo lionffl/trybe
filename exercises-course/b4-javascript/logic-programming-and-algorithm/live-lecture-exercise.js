@@ -9,8 +9,6 @@ for (let i = 1; i <= 50; i++) {
 
 console.log(`A soma de 1 a 50 e' ${sum}.`)
 
-
-
 //2. Crie um algoritmo que conte quantos números do intervalo entre 2 e 150 são divisíveis por 3.
 // Caso a quantidade seja igual a 50, exiba uma mensagem secreta.
 
@@ -129,9 +127,3 @@ switch(younger) {
         console.log(`Ronald e' o mais jovem.`);
         break;
 }
-
-
-
-
-
-
