@@ -1,4 +1,4 @@
-// Sort the numbers (ascending order) of the following array
+// Sort the numbers (ascending order) of the array:
 
 let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 let numbersSize = numbers.length;
@@ -16,7 +16,7 @@ for (let i = 0; i < numbersSize; i++) {
 
 console.log(numbers);
 
-// Sort the numbers (descending order) of the following array
+// Sort the numbers (descending order)
 
 console.log(numbers)
 for (let i = 0; i < numbersSize; i++) {
