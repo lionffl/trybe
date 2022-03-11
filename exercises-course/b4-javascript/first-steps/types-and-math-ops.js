@@ -17,12 +17,12 @@ let height = 8;
 
 // Set a constant named `area` with the value of base * height
 
-let area = base * height;
+const area = base * height;
 
 console.log(area);
 
 // Set a constant named `perimeter` with the value of base + height
 
-let perimeter = base + height;
+const perimeter = base + height;
 
 console.log(perimeter);
