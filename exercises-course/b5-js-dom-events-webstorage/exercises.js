@@ -27,8 +27,6 @@ document.getElementsByTagName('p')[0].style.textTransform = 'uppercase';
 
 let arrayOfPs = document.getElementsByTagName('p');
 
-
-
 for (let i = 0; i < arrayOfPs.length; i++) {
     console.log(arrayOfPs[i].innerHTML);
 }
