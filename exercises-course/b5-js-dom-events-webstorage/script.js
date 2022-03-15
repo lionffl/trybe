@@ -9,7 +9,7 @@ document.getElementById('subtitle').innerText = "A League of Legends story";
 
 // 2)
 
-document.getElementsByClassName('content')[0].style.textDecoration = 'underline';
+const cor = document.getElementsByClassName('content')[0].style.textDecoration = 'underline';
 
 // 3)
 
