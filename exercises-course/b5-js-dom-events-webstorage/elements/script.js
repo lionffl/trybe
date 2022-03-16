@@ -50,3 +50,64 @@ console.log(result);
 result = document.getElementById('pai').children[2];
 
 console.log(result);
+
+// 9)
+
+const paiDoElementoOndeVoceEsta = document.getElementById('pai');
+
+const paragraph = document.createElement('p');
+
+paragraph.innerText = "This is a paragraph."
+
+paiDoElementoOndeVoceEsta.appendChild(paragraph);
+
+// 10)
+
+const filhoDoElementoOndeVoceEsta = document.getElementById('elementoOndeVoceEsta');
+
+const headTitle = document.createElement('h1');
+
+headTitle.innerText = "This is a h1 title.";
+
+filhoDoElementoOndeVoceEsta.appendChild(headTitle);
+
+// 11)
+
+const bisneto = document.getElementById('primeiroFilhoDoFilho');
+
+const bisnetoDiv = document.createElement('div');
+
+bisnetoDiv.innerText = "This is a div.";
+
+bisneto.appendChild(bisnetoDiv);
+
+// 12 )
+
+const paiDoBisneto = document.getElementById('primeiroFilhoDoFilho').parentNode;
+
+result = paiDoBisneto.nextElementSibling;
+
+console.log(result);
+
+// 13)
+
+let pai = document.getElementById('elementoOndeVoceEsta');
+
+let filhoRemovido = document.getElementById('segundoEUltimoFilhoDoFilho');
+
+pai.removeChild(filhoRemovido);
+
+pai = document.getElementById('pai');
+
+filhoRemovido = document.getElementById('primeiroFilho');
+
+pai.removeChild(filhoRemovido);
+
+filhoRemovido = document.getElementById('terceiroFilho');
+
+pai.removeChild(filhoRemovido);
+
+filhoRemovido = document.getElementById('quartoEUltimoFilho');
+
+pai.removeChild(filhoRemovido);
+
