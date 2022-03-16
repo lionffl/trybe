@@ -1,0 +1,9 @@
+document.getElementById('header-container').style.backgroundColor = 'limegreen';
+document.getElementById('container').style.backgroundColor = 'lightgrey';
+document.getElementsByClassName('emergency-tasks')[0].style.backgroundColor = 'pink';
+document.getElementsByClassName('no-emergency-tasks')[0].style.backgroundColor = 'gold';
+document.getElementsByTagName('h3')[0].style.backgroundColor = 'salmon';
+document.getElementsByTagName('h3')[1].style.backgroundColor = 'salmon';
+document.getElementsByTagName('h3')[2].style.backgroundColor = 'black';
+document.getElementsByTagName('h3')[3].style.backgroundColor = 'black';
+document.getElementById('footer-container').style.backgroundColor = 'green';
