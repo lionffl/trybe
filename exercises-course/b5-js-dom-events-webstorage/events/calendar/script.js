@@ -53,7 +53,24 @@ function createBtn(string) {
   btn.innerText = string;
 }
 createBtn("Feriados");
+const btn = document.getElementById('btn-holiday')
 
-
+// 3)
+let defaultColor = 'rgb(238,238,238)'
+let holidayHighlight = false;
+let holidays = document.getElementsByClassName('holiday');
+btn.addEventListener('click', function() {
+  
+  if (!holidayHighlight) {
+    for (let i = 0; i < holidays.length; i++) {
+      holidays[i].style.backgroundColor = 'white'; 
+    } holidayHighlight = true;
+  }
+  else { 
+    for (let i = 0; i < holidays.length; i++) {
+      holidays[i].style.backgroundColor = defaultColor; 
+    } holidayHighlight = false;
+  }
+})
 
 
