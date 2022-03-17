@@ -44,4 +44,16 @@ for (let i = 0; i < dezDaysList.length; i++) {
 
 // 2)
 
+const btnContainer = document.getElementsByClassName('buttons-container')[0];
+
+function createBtn(string) {
+  let btn = document.createElement('button');
+  btnContainer.appendChild(btn);
+  btn.id = 'btn-holiday';
+  btn.innerText = string;
+}
+createBtn("Feriados");
+
+
+
 
