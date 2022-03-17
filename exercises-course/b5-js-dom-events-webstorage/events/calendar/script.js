@@ -42,3 +42,6 @@ for (let i = 0; i < dezDaysList.length; i++) {
   }
 }
 
+// 2)
+
+
