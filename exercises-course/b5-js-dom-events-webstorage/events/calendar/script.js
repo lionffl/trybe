@@ -105,6 +105,7 @@ const arrayOfDays = document.getElementsByClassName('day');
 for (let i = 0; i < arrayOfDays.length; i++) {
   arrayOfDays[i].addEventListener('mouseover', function () {
     arrayOfDays[i].style.fontSize = '50px';
+    arrayOfDays[i].style.cursor = 'pointer';
   })
 }
 
@@ -119,7 +120,10 @@ for (let i = 0; i < arrayOfDays.length; i++) {
 const taskContainer = document.querySelector('.my-tasks');
 const task = document.createElement('span');
 const subtitle = document.createElement('div');
+let subtitleColor = [];
+
 function openTask(string, color) {
+  subtitleColor.push(color);
   taskContainer.appendChild(task);
   taskContainer.appendChild(subtitle);
   task.innerText = string;
@@ -127,7 +131,16 @@ function openTask(string, color) {
   subtitle.style.backgroundColor = color;
 }
 
-openTask('Estudar', 'red');
+// openTask('Estudar', 'red');
+
+const btnAdd = document.getElementById('btn-add');
+const taskInput = document.getElementById('task-input');
+
+btnAdd.addEventListener('click', function() {
+  let newTask = taskInput.value;
+  openTask(newTask,'red');
+});
+
 
 // 9
 let selectControl = false;
@@ -145,14 +158,28 @@ subtitle.addEventListener('click', function () {
 })
 
 // 10
-
-const taskCheck = document.getElementsByClassName('task');
-let selectionStatus;
-
-if (taskCheck.length > 0) {
-  console.log('Nenhuma tarefa selecionada.')
-} else {
-  console.log('Tem pelo menos uma tarefa selecionada.')
+let taskControl = false;
+let defaultCharColor = 'rgb(119,119,119)';
+for (let i = 0; i < arrayOfDays.length; i++) {
+  arrayOfDays[i].addEventListener('click', alocateTask);
 }
+
+function alocateTask() {
+
+  if (!taskControl && selectControl) {
+    for (let i = 0; i < arrayOfDays.length; i++) {
+      arrayOfDays[i].addEventListener('click', function () {
+        arrayOfDays[i].style.color = subtitleColor;
+      })
+    } taskControl = true;
+  } else {
+    for (let i = 0; i < arrayOfDays.length; i++) {
+      arrayOfDays[i].addEventListener('click', function () {
+        arrayOfDays[i].style.color = defaultCharColor ;
+      })
+    } taskControl = false;
+  }
+}
+
 
 
