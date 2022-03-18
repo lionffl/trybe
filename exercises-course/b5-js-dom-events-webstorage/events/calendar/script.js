@@ -121,7 +121,6 @@ const taskContainer = document.querySelector('.my-tasks');
 const task = document.createElement('span');
 const subtitle = document.createElement('div');
 let subtitleColor = [];
-
 function openTask(string, color) {
   subtitleColor.push(color);
   taskContainer.appendChild(task);
@@ -131,16 +130,7 @@ function openTask(string, color) {
   subtitle.style.backgroundColor = color;
 }
 
-// openTask('Estudar', 'red');
-
-const btnAdd = document.getElementById('btn-add');
-const taskInput = document.getElementById('task-input');
-
-btnAdd.addEventListener('click', function() {
-  let newTask = taskInput.value;
-  openTask(newTask,'red');
-});
-
+openTask('Estudar', 'red');
 
 // 9
 let selectControl = false;
