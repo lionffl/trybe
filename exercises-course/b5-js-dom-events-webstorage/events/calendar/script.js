@@ -165,11 +165,47 @@ function alocateTask() {
   } else {
     for (let i = 0; i < arrayOfDays.length; i++) {
       arrayOfDays[i].addEventListener('click', function () {
-        arrayOfDays[i].style.color = defaultCharColor ;
+        arrayOfDays[i].style.color = defaultCharColor;
       })
     } taskControl = false;
   }
 }
+
+// Bonus
+
+const inputValue = document.getElementById('task-input');
+const btnAdd = document.getElementById('btn-add');
+const inputContainer = document.querySelector('.input-container');
+
+btnAdd.addEventListener('click', function () {
+  let newMissionContent = inputValue.value;
+  let newMission;
+
+  if (!newMissionContent) {
+    alert('Por favor, digite um compromisso.')
+  } else {
+    newMission = document.createElement('li');
+    newMission.innerText = newMissionContent;
+    inputContainer.appendChild(newMission);
+  }
+})
+
+inputValue.addEventListener('keypress', function (keypressed) {
+
+  let newMissionContent = inputValue.value;
+  let newMission;
+
+  if (keypressed.key === 'Enter') {
+
+    if (!newMissionContent) {
+      alert('Por favor, digite um compromisso.')
+    } else {
+      newMission = document.createElement('li');
+      newMission.innerText = newMissionContent;
+      inputContainer.appendChild(newMission);
+    }
+  }
+})
 
 
 
