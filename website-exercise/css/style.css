@@ -79,11 +79,6 @@ main {
     text-align: justify;
 }
 
-.right-bar {
-    width: 30%;
-    margin-top: 50px;
-}
-
 .content .formal-presentation img {
     width: 300px;
 }
@@ -134,6 +129,8 @@ figcaption {
 
 .right-bar {
     border-left: 1px ridge;
+    width: 30%;
+    margin-top: 50px;
 }
 
 .right-bar table,.table-title {
@@ -198,4 +195,11 @@ footer {
     font-size: x-small;
     font-style: italic;
     border-top: 1px ridge;
+}
+
+/* CSS Icon settings */
+
+.main-menu ul i {
+    color: black;
+    width: 1px;
 }
