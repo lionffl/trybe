@@ -24,6 +24,7 @@ h3 {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: whitesmoke;
     border-radius: 3px;
+    font-size: medium;
 }
 
 .trybe {
@@ -197,9 +198,14 @@ footer {
     border-top: 1px ridge;
 }
 
-/* CSS Icon settings */
+/* CSS User Settings Page */
 
 .main-menu ul i {
     color: black;
     width: 1px;
 }
+
+.user-settings {
+    width: 30%;
+}
+
