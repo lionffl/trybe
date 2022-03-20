@@ -1,1 +1,1 @@
-// https://lionffl.github.io/trybe/website-exercise/index.html
+// User Settings Page added to https://lionffl.github.io/trybe/website-exercise/index.html
