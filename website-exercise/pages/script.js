@@ -52,7 +52,6 @@ function pageInit() {
     for (let i = 0; i < content.length; i++) {
         content[i].style.lineHeight = lineSpace;
     }
-    console.log(backgroundColor)
 }
 
 window.onload = function () {
