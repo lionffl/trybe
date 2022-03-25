@@ -9,16 +9,18 @@
 <body>
 <form action="" method="get">
     <h1>Login</h1>
-    <label for="user-email">Email Address</label>
-    <br>
-    <input type="text" id="user-email" required autocomplete="off" name="login" autofocus>
+    <label for="user-email">Email Address <br>
+        <input type="email" id="user-email" required autocomplete="off" name="login" autofocus>
+    </label>
     <br><br>
-    <label for="password">Senha</label>
-    <br>
-    <input type="password" id="password" required name="password">
+    <label for="password">Senha<br>
+        <input type="password" id="password" required name="password">
+    </label>
     <br><br>
     <button type="submit">Login</button>
-    <input id="remember-me" type="checkbox"> <label for="remember-me">Lembre-me</label>
+    <label for="remember-me" style="margin-left: 10px;">Lembre-me
+        <input id="remember-me" type="checkbox">
+    </label>
 </form>
 </body>
 </html>
