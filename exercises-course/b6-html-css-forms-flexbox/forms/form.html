@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TrybeTrip Form</title>
+</head>
+<body>
+    <h1>TrybeTrip</h1>
+    <form action="" method="get" class="form"> 
+        <fieldset>
+            <section>
+                <h2>Personal Data</h2>
+            <label for="fullname">Fullname:
+                <input type="text" name="fullname" id="fullname" required>
+            </label><br><br>
+            <label for="email">Email Address:
+                <input type="email" name="email" id="email" required>
+            </label>
+            </section>
+            <section>
+                <h2>Favorite Destionation</h2>
+                <label for="field">Field
+                    <input type="radio" id="field" name="destination" checked>
+                </label>
+                <label for="beach">Beach
+                    <input type="radio" id="beach" name="destination">
+                </label>
+                <label for="country">Country
+                    <input type="radio" id="country" name="destination">
+                </label>
+                <label for="urban">Urban
+                    <input type="radio" id="urban" name="destination">
+                </label>
+            </section>
+            <section>
+                <h3>Tell us why you deserve to win the TrybeTrip</h3>
+                <textarea name="" id="motivation" cols="45" rows="10" style="resize: none;" required></textarea>
+            </section>
+            <section>
+                <h3>Choose your preferred date</h3>
+                <label for="pref-travel-date">Date:
+                    <input type="datetime-local" id="pref-travel-date">
+                </label><br><br>
+                <label for="newsletter"><span class="checkbox">Check if you want to receive new promotions</span>
+                    <input type="checkbox" id="newsletter" name="newsletter" checked required>
+                </label><br>
+                <label for="pic-share"><span class="checkbox">I agree that my travel pictures will be use in another travel advertise</span>
+                    <input type="checkbox" id="pic-share" name="pic-share" checked required>
+                </label><br><br>
+                <section class="buttons">
+                    <button type="reset" class="btn" id="btn-clear">Clear form</button>
+                    <button type="submit" class="btn" id="btn-submit">Submit</button>    
+                </section>  
+            </section>   
+    </fieldset>
+    </form>
+</body><script src="script.js"></script>
+</html>
