@@ -1,0 +1,62 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    padding: 0px;
+}
+.form {
+    width: 550px;
+    margin: 5px;
+    padding: 5px;
+}
+
+fieldset {
+    display: block;
+    border-radius: 5px;
+}
+
+h1 {
+    margin: 5px;
+    padding: 5px;
+}
+
+#fullname {
+    margin-left: 32px;
+}
+
+.buttons {
+   display: flex;
+   justify-content: right;
+   align-items: flex-end;
+}
+
+.checkbox {
+    font-size:small
+}
+
+.btn {
+    border-radius: 5px;
+    border-style: hidden;
+    padding: 5px 15px;
+    pad
+}
+
+#btn-submit {
+    background-color: green;
+    color: blanchedalmond;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+#btn-submit:hover {
+    background-color: lime;
+}
+
+#btn-clear {
+    background-color: lightgray;
+}
+
+#btn-clear:hover {
+    background-color: antiquewhite;
+}
