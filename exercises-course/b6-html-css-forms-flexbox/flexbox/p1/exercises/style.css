@@ -11,9 +11,52 @@
 
 .gallery-img {
   width: 150px;
+  margin-top: 20px;
 }
 
 .social-img {
   width: 25px;
   margin-left: 10px;
 }
+
+.header-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portrait {
+  display: flex;
+  flex-direction: column;
+  background-color: lightgrey;
+  width: 200px;
+  height: 220px;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  border-radius: 15px;
+  border: 2px solid white;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
