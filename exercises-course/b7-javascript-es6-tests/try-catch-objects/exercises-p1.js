@@ -23,11 +23,13 @@ function sum() {
     verifyIsNull(value1,value2);
     const result = parseInt(value1) + parseInt(value2);
     document.getElementById('result').innerHTML = `Resultado: ${result}`;
-    document.getElementById('value1').value = '';
-    document.getElementById('value2').value = '';
   } catch (e) {
     document.getElementById('result').innerHTML = `Resultado: ${errorMessage}`;
     throw e.message;
+  }
+  finally {
+    document.getElementById('value1').value = '';
+    document.getElementById('value2').value = '';
   }
 }
 
