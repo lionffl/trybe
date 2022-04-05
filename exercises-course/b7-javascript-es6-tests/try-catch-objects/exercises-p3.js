@@ -100,6 +100,5 @@ const verifyPair = (obj, key, value) => {
   return console.log(isTrue);
 }
 
-
 verifyPair(lesson3, 'turno', 'noite');
 verifyPair(lesson2, 'materia', 'Maria Clara');
