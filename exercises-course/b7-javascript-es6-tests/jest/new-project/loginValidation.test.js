@@ -8,14 +8,12 @@ const {
 describe("a função verifyCredentials()", () => {
   
   it("verifyCredentials() calls the correct function depending on the user and password input", () => {
-    
     const user = {
-      userName: 'Bob',
+      userName: 'Joana',
       password: 123456,
     };
       
     const { userName, password } = user;
-
     expect(verifyCredentials({ userName, password })).toBe(
       "Hello, Joana! Que bom ter você de volta"
     ); 
@@ -28,6 +26,12 @@ describe("a função verifyCredentials()", () => {
   });
 
   it("loginErrorMessage() returns a message in the format: `Pessoa usuária '${user}' não encontrada, tente novamente!`", () => {
+    // const user = {
+    //   userName: 'Bob',
+    //   password: 123456,
+    // };
+      
+    // const { userName, password } = user;
     expect(loginErrorMessage("Bob")).toBe(
       "Pessoa usuária 'Bob' não encontrada, tente novamente!"
     );
