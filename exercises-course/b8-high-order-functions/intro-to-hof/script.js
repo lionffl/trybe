@@ -21,7 +21,6 @@ const addEmployee = (name) => ({ name, email: `${name.toLowerCase().replace(/ /g
 
 console.log(newEmployees(addEmployee('Felipe Lima'), addEmployee('Joao Batista'), addEmployee('Maria das Gracas')));
 
-
 const winCondition = (myGame, winnerGame) => myGame === winnerGame;
 
 const gameGen = (myGame, winCondition) => {
@@ -32,6 +31,8 @@ const gameGen = (myGame, winCondition) => {
 
 console.log(gameGen(4, winCondition));
 
+const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
+const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
 
 const checkAnswer = (RIGHT_ANSWERS, STUDENT_ANSWERS) => {
   let grade = 0;
@@ -54,7 +55,6 @@ const checkAnswer = (RIGHT_ANSWERS, STUDENT_ANSWERS) => {
   return grade;
 }
 
-const RIGHT_ANSWERS = ['A', 'C', 'B', 'D', 'A', 'A', 'D', 'A', 'D', 'C'];
-const STUDENT_ANSWERS = ['A', 'N.A', 'B', 'D', 'A', 'C', 'N.A', 'A', 'D', 'B'];
+const rateTest = (arr1, arr2, callback) => console.log(callback(arr1, arr2));
 
-console.log(checkAnswer(RIGHT_ANSWERS,STUDENT_ANSWERS));
+rateTest(RIGHT_ANSWERS, STUDENT_ANSWERS, checkAnswer);
