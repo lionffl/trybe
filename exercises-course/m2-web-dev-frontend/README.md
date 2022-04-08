@@ -10,5 +10,3 @@ Module 2 - Web Development Front-end
 - b17 - Context API & React Hooks
 - b18 - Project: Recipe App
 
-- b9 - Jest, Fetch API & Callbacks
-
