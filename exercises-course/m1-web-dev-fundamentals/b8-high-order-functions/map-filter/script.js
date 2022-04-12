@@ -88,3 +88,55 @@ const makeNewArray = (array) => {
 const newArray = books.map(makeNewArray);
 
 console.log(newArray);
+
+const makeNewArray2 = (array) => {
+  return {
+    age: array.releaseYear - array.author.birthYear,
+    author: array.name,
+  };
+};
+
+const sortArrayByAge = (array) => array.sort((x, y) => x.age - y.age);
+
+const newArray2 = books.map(makeNewArray2);
+
+console.log(sortArrayByAge(newArray2));
+
+const filterByGenre = (array) => {
+  return array.genre === 'Fantasia' || array.genre === 'Ficção Científica';
+};
+
+const newArray3 = books.filter(filterByGenre);
+
+console.log(newArray3);
+
+const orderArrayByAge = (array) => {
+  return 2022 - array.releaseYear > 60;
+};
+
+const newArray4 = books.filter(orderArrayByAge);
+
+const sortArrayByAge2 = (array) => array.sort((x, y) => x.releaseYear - y.releaseYear);
+
+console.log(sortArrayByAge2(newArray4));
+
+const arrayOfAuthors = (array) => {
+    return array.author.name;
+};
+
+const newArray5 = newArray3.map(arrayOfAuthors);
+
+console.log(newArray5.sort());
+
+const arrayOfOldBooks = (array) => {
+  return array.name;
+};
+
+const newArray6 = newArray4.map(arrayOfOldBooks);
+
+console.log(newArray6);
+
+
+const find3DotName = (array) => {
+  return array.author.name
+}
