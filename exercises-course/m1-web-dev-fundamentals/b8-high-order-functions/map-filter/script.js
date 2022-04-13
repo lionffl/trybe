@@ -137,6 +137,21 @@ const newArray6 = newArray4.map(arrayOfOldBooks);
 console.log(newArray6);
 
 
-const find3DotName = (array) => {
-  return array.author.name
+const countPoint = (array, index) => {
+  array[index].split(' ');
 }
+
+const newArray7 = books.map(arrayOfAuthors);
+
+console.log(newArray7);
+
+const expectedResult = 'O Senhor dos Anéis';
+
+function authorWith3DotsOnName() {
+  return books.find((book) => (
+    book.author.name.split(' ')
+      .filter((word) => word.endsWith('.')).length === 3
+  )).name;
+}
+
+console.log(authorWith3DotsOnName());
