@@ -128,7 +128,6 @@ const getMostFrequentNumber = (array) => {
   array.forEach((value) => {
     let counter = 0;
     for (number of array) if (number === value) counter += 1;
-
     if (counter > higherFrequency) {
       higherFrequency = counter;
       mostFrequentNumber = value;
@@ -138,3 +137,50 @@ const getMostFrequentNumber = (array) => {
 }
 
 console.log(getMostFrequentNumber(array));
+
+const basket = [
+  'Melancia', 'Abacate', 'Melancia', 'Melancia', 'Uva', 'Laranja',
+  'Jaca', 'Pera', 'Melancia', 'Uva', 'Laranja', 'Melancia',
+  'Banana', 'Uva', 'Pera', 'Abacate', 'Laranja', 'Abacate',
+  'Banana', 'Melancia', 'Laranja', 'Laranja', 'Jaca', 'Uva',
+  'Banana', 'Uva', 'Laranja', 'Pera', 'Melancia', 'Uva',
+  'Jaca', 'Banana', 'Pera', 'Abacate', 'Melancia', 'Melancia',
+  'Laranja', 'Pera', 'Banana', 'Jaca', 'Laranja', 'Melancia',
+  'Abacate', 'Abacate', 'Pera', 'Melancia', 'Banana', 'Banana',
+  'Abacate', 'Uva', 'Laranja', 'Banana', 'Abacate', 'Uva',
+  'Uva', 'Abacate', 'Abacate', 'Melancia', 'Uva', 'Jaca',
+  'Uva', 'Banana', 'Abacate', 'Banana', 'Uva', 'Banana',
+  'Laranja', 'Laranja', 'Jaca', 'Jaca', 'Abacate', 'Jaca',
+  'Laranja', 'Melancia', 'Pera', 'Jaca', 'Melancia', 'Uva',
+  'Abacate', 'Jaca', 'Jaca', 'Abacate', 'Uva', 'Laranja',
+  'Pera', 'Melancia', 'Jaca', 'Pera', 'Laranja', 'Jaca',
+  'Pera', 'Melancia', 'Jaca', 'Banana', 'Laranja', 'Jaca',
+  'Banana', 'Pera', 'Abacate', 'Uva',
+];
+
+const fruits = ['Melancia', 'Abacate', 'Melancia', 'Melancia', 'Uva'];
+
+const arrayToObj = (array) => array.reduce((acc, cValue) => {
+  acc[cValue] = cValue
+  return acc;
+}, {});
+
+
+const countFruits = (array) => {
+  let counter = 0;
+  let totalFruits = [];
+  const obj = arrayToObj(array);
+  array.forEach((value) => {
+   for (fruit of basket) {
+    if (value === fruit) counter += 1;
+   }
+   obj[value] = counter;
+   totalFruits.push(counter);
+   counter = 0;
+  })
+  return obj;
+}
+
+
+
+console.log(countFruits(fruits));
