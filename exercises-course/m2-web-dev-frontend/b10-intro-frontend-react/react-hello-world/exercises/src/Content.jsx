@@ -23,10 +23,10 @@ const conteudos = [
   },
 ];
 
-class Component extends React.Component {
+class Content extends React.Component {
   render() {
-    return conteudos.map(({ conteudo, bloco, status } ) => <li>O conteudo e {conteudo} <br />Status: {status} <br /> Bloco: {bloco}</li>)
+    return conteudos.map(({ conteudo, bloco, status } ) => <li>{conteudo} <br />Status: {status} <br /> Bloco: {bloco}</li>)
   }
 }
 
-export default Component;
+export default Content;

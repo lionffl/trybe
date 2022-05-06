@@ -15,13 +15,44 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 30vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.App-content {
+  list-style: none;
+  text-align: justify;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  min-height: 50vh;
+  line-height: 30px;
+  /* margin: 10px; */
+  background-color: #282c34;
+}
+
+.App-content li {
+  background-color: green;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.App-footer {
+  background-color: #282c34;
+  color: white;
+  min-height: 18vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: smaller;
+  font-style: italic;
+  padding: 10px;
 }
 
 .App-link {
