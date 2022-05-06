@@ -1,4 +1,3 @@
-import './App.css';
 import Image from './Image';
 
 function App() {
