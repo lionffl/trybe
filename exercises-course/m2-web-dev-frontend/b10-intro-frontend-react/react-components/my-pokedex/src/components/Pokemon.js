@@ -1,5 +1,5 @@
 import React from "react";
-import getPokemonInfo from "../Functions/getPokemonInfo";
+import getPokemonInfo from "../functions/getPokemonInfo";
 
 class Pokemon extends React.Component {
   render(){

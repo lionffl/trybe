@@ -1,5 +1,5 @@
 import React from "react";
-import Pokemon from "../Components/Pokemon";
+import Pokemon from "../components/Pokemon";
 import pokemons from '../data'
 
 

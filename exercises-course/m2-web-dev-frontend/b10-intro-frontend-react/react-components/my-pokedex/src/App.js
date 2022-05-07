@@ -1,4 +1,4 @@
-import Pokedex from './Components/Pokedex';
+import Pokedex from './components/Pokedex';
 
 import './App.css';
 
