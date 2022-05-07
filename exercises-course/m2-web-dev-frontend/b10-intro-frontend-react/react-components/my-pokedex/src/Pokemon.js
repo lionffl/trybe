@@ -8,12 +8,12 @@ class Pokemon extends React.Component {
     const { value, measurementUnit } = pokemon.averageWeight;
 
     return (
-    <div className="pokemon">
+    <article className="pokemon">
       <img src={pokemon.image} alt={pokemon.name} onClick={getPokemonInfo}></img>
-      <h3>{pokemon.name}</h3>
+      <h4>{pokemon.name}</h4>
       <p>Element/Type: {pokemon.type}</p>
       <p>Weight: {value} {measurementUnit}</p>
-    </div>
+    </article>
     )
   }
 }
