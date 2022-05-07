@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+.App {
+  text-align: center;
+}
+
+.pokemon {
+  height: auto;
+  width: 400px;
+  border: 1px solid black;
+  margin: 25px;
+}
+
+.pokedex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.pokemon img:hover {
+  cursor: pointer;
+}
+
+
