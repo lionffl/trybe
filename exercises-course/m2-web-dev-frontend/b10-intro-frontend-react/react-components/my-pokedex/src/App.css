@@ -3,6 +3,8 @@
 }
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
 }
 
 .pokemon {
@@ -10,16 +12,28 @@
   width: 400px;
   border: 1px solid black;
   margin: 25px;
+  transition: background-color 800ms;
+  border-radius: 10px;
+  flex-basis: 25%;
 }
 
 .pokedex {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  background-color: whitesmoke;
+  width: 50vw;
+  align-self: center;
+  border-radius: 5px;
 }
 
-.pokemon img:hover {
+.pokemon:hover {
   cursor: pointer;
+  background-color: red;
+}
+
+h1 {
+  text-align: center;
 }
 
 
