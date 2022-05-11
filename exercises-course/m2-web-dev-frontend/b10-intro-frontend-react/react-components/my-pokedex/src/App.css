@@ -22,7 +22,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: whitesmoke;
-  width: 50vw;
+  width: 70vw;
   align-self: center;
   border-radius: 5px;
 }
@@ -34,6 +34,13 @@
 
 h1 {
   text-align: center;
+}
+
+.next-btn {
+  height: 40px;
+  width: 150px;
+  align-self: center;
+  border-radius: 4px;
 }
 
 
