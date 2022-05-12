@@ -36,4 +36,17 @@ h1 {
   text-align: center;
 }
 
+.btn {
+  height: 40px;
+  width: 150px;
+  align-self: center;
+  border-radius: 4px;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
 
