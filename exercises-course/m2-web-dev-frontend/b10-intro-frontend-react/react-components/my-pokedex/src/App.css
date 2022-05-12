@@ -22,7 +22,7 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   background-color: whitesmoke;
-  width: 70vw;
+  width: 50vw;
   align-self: center;
   border-radius: 5px;
 }
@@ -36,11 +36,17 @@ h1 {
   text-align: center;
 }
 
-.next-btn {
+.btn {
   height: 40px;
   width: 150px;
   align-self: center;
   border-radius: 4px;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 
