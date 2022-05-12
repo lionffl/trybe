@@ -15,6 +15,7 @@
   transition: background-color 800ms;
   border-radius: 10px;
   flex-basis: 25%;
+  align-self: center;
 }
 
 .pokedex {
@@ -41,12 +42,12 @@ h1 {
   width: 150px;
   align-self: center;
   border-radius: 4px;
+  margin: 10px;
 }
 
 .filter-buttons {
   display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 
