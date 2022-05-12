@@ -1,14 +1,16 @@
 .App {
- margin: 40px;
+ margin: 20px;
 }
 
 .form-container {
   display: flex;
-  height: 300px;
 }
 
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  height: 400px;
+  width: auto;
+  justify-content: space-between;
+  padding: 20px;
 }

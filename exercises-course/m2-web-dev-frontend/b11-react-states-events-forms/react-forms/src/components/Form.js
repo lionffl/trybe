@@ -5,19 +5,22 @@ class Form extends Component {
     inputName: '',
     inputEmail: '',
     favoriteGame: '',
-    textAreaInput: ''
+    textAreaInput: '',
+    checkbox: false
   }
 
   handleChange = (event) => {
-    this.setState({ [event.target.name]: event.target.value })
+    this.setState({ 
+      [event.target.name]: event.target.type === 'checkbox' ? event.target.checked : event.target.value })
   }
 
   render() {
     const { inputEmail, inputName, textAreaInput } = this.state;
     return (
       <div className='form-container'>
-        <form className='form'>
+        <form>
           <h2>A Simple Form</h2>
+          <fieldset className='form'>
           <label>
             Name: <br />
             <input type="text" name="inputName" value={inputName} onChange={this.handleChange} />
@@ -37,7 +40,12 @@ class Form extends Component {
             Suggestions:<br />
             <textarea name="textAreaInput" resize="none" cols="25" rows="5" value={textAreaInput} onChange={this.handleChange} />
           </label>
+          <label>
+            I agree
+            <input name="checkbox" type="checkbox" onChange={this.handleChange} />
+          </label>
           <button>Submit</button>
+          </fieldset>
         </form>
       </div>
     )
