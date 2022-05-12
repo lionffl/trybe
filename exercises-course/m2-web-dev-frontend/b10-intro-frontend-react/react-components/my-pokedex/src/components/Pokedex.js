@@ -4,6 +4,11 @@ import Pokemon from './Pokemon';
 
 class Pokedex extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.pokemonBorderRef = React.createRef();
+  };
+
   state = {
     pokemonIndex: 0,
     pokedex: this.props.pokemons,
@@ -18,12 +23,18 @@ class Pokedex extends React.Component {
     })
   }
 
+  changeStyleByPokemonType = (pokemonType) => {
+    this.pokemonBorderRef.current.className = `pokemon ${pokemonType}`;
+  }
+
   setFilter = (event) => {
+    const pokemonType = event.target.name;
     this.setState({
       pokemonIndex: 0,
       pokedex: this.props.pokemons,
-      pokemonElementFilter: event.target.name
+      pokemonElementFilter: pokemonType
     })
+    this.changeStyleByPokemonType(pokemonType)
   }
 
   getPokemonInfo = (moreInfo) => {
@@ -35,14 +46,16 @@ class Pokedex extends React.Component {
     const filtredPokemons = pokedex.filter((pokemon) => !pokemonElementFilter ? pokemon.type : pokemon.type === pokemonElementFilter)
     return (
       <>
-        <Pokemon
-          getPokemonInfoFunction={this.getPokemonInfo}
-          name={filtredPokemons[pokemonIndex].name}
-          type={filtredPokemons[pokemonIndex].type}
-          averageWeight={filtredPokemons[pokemonIndex].averageWeight}
-          image={filtredPokemons[pokemonIndex].image}
-          moreInfo={filtredPokemons[pokemonIndex].moreInfo}
-        />
+        <div ref={this.pokemonBorderRef} className="pokemon">
+          <Pokemon
+            getPokemonInfoFunction={this.getPokemonInfo}
+            name={filtredPokemons[pokemonIndex].name}
+            type={filtredPokemons[pokemonIndex].type}
+            averageWeight={filtredPokemons[pokemonIndex].averageWeight}
+            image={filtredPokemons[pokemonIndex].image}
+            moreInfo={filtredPokemons[pokemonIndex].moreInfo}
+          />
+        </div>
         <Buttons
           onClickFunction={this.getNextPokemon}
           setFilterFunction={this.setFilter}

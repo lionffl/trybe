@@ -6,7 +6,7 @@ class Pokemon extends React.Component {
     const { name, image, type, averageWeight, moreInfo, getPokemonInfoFunction } = this.props;
     const { value, measurementUnit } = averageWeight;
     return (
-      <div onClick={() => getPokemonInfoFunction(moreInfo)} className="pokemon">
+      <div onClick={() => getPokemonInfoFunction(moreInfo)}>
         <p>{name}</p>
         <p>Type {type}</p>
         <p>Average Weight {value} {measurementUnit}</p>

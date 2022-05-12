@@ -30,7 +30,7 @@
 
 .pokemon:hover {
   cursor: pointer;
-  background-color: red;
+  background-color: #F8E3D7;
 }
 
 h1 {
@@ -50,4 +50,22 @@ h1 {
   justify-content: center;
 }
 
+.Fire {
+  border: 5px solid red;
+}
 
+.Electric {
+  border: 5px solid #E0DE6A;
+}
+
+.Poison {
+  border: 5px solid palevioletred;
+}
+
+.Psychic {
+  border: 5px solid blue;
+}
+
+.Normal {
+  border: 5px solid;
+}
