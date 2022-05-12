@@ -10,9 +10,9 @@
 .pokemon {
   height: auto;
   width: 400px;
-  border: 1px solid black;
+  border: 2px solid;
   margin: 25px;
-  transition: background-color 800ms;
+  transition: all 500ms;
   border-radius: 10px;
   flex-basis: 25%;
   align-self: center;
@@ -51,21 +51,27 @@ h1 {
 }
 
 .Fire {
-  border: 5px solid red;
+  border: 3px solid red;
+  transition: all 500ms;
 }
 
 .Electric {
-  border: 5px solid #E0DE6A;
+  border: 3px solid #E0DE6A;
+  transition: all 500ms;
 }
 
 .Poison {
-  border: 5px solid palevioletred;
+  border: 3px solid palevioletred;
+  transition: all 500ms;
 }
 
 .Psychic {
-  border: 5px solid blue;
+  border: 3px solid blue;
+  transition: all 500ms;
+
 }
 
 .Normal {
-  border: 5px solid;
+  border: 3px solid;
+  transition: all 500ms;
 }
