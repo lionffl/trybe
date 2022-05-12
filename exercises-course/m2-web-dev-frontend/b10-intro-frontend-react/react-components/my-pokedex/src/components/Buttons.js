@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 class Buttons extends Component {
   render() {
-   const { setFilterFunction, onClickFunction, filtredPokemons  } = this.props
+    const { setFilterFunction, onClickFunction, filtredPokemons } = this.props
     return (
       <>
         <button className="btn" onClick={() => onClickFunction(filtredPokemons)}>Next Pokemon</button>

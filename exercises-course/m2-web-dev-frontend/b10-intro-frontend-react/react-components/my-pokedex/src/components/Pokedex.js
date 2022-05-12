@@ -3,7 +3,7 @@ import Buttons from './Buttons';
 import Pokemon from './Pokemon';
 
 class Pokedex extends React.Component {
-  
+
   state = {
     pokemonIndex: 0,
     pokedex: this.props.pokemons,
@@ -12,16 +12,18 @@ class Pokedex extends React.Component {
 
   getNextPokemon = (filtredPokemons) => {
     const { pokemonIndex } = this.state;
-    this.setState({ 
+    this.setState({
       pokedex: filtredPokemons,
-      pokemonIndex: filtredPokemons.length === 1 ? 0 : pokemonIndex >= filtredPokemons.length-1 ? 0 : pokemonIndex + 1 })
+      pokemonIndex: filtredPokemons.length === 1 ? 0 : pokemonIndex >= filtredPokemons.length - 1 ? 0 : pokemonIndex + 1
+    })
   }
 
-  setFilter = (event) => { 
+  setFilter = (event) => {
     this.setState({
       pokemonIndex: 0,
       pokedex: this.props.pokemons,
-      pokemonElementFilter: event.target.name})
+      pokemonElementFilter: event.target.name
+    })
   }
 
   getPokemonInfo = (moreInfo) => {
@@ -33,18 +35,18 @@ class Pokedex extends React.Component {
     const filtredPokemons = pokedex.filter((pokemon) => !pokemonElementFilter ? pokemon.type : pokemon.type === pokemonElementFilter)
     return (
       <>
-        <Pokemon 
-        getPokemonInfoFunction={this.getPokemonInfo}
-        name={filtredPokemons[pokemonIndex].name}
-        type={filtredPokemons[pokemonIndex].type}
-        averageWeight={filtredPokemons[pokemonIndex].averageWeight}
-        image={filtredPokemons[pokemonIndex].image}
-        moreInfo={filtredPokemons[pokemonIndex].moreInfo}
+        <Pokemon
+          getPokemonInfoFunction={this.getPokemonInfo}
+          name={filtredPokemons[pokemonIndex].name}
+          type={filtredPokemons[pokemonIndex].type}
+          averageWeight={filtredPokemons[pokemonIndex].averageWeight}
+          image={filtredPokemons[pokemonIndex].image}
+          moreInfo={filtredPokemons[pokemonIndex].moreInfo}
         />
         <Buttons
-        onClickFunction={this.getNextPokemon}
-        setFilterFunction={this.setFilter}
-        filtredPokemons={filtredPokemons}
+          onClickFunction={this.getNextPokemon}
+          setFilterFunction={this.setFilter}
+          filtredPokemons={filtredPokemons}
         />
       </>
     )
