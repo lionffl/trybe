@@ -1,0 +1,14 @@
+.App {
+ margin: 40px;
+}
+
+.form-container {
+  display: flex;
+  height: 300px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
