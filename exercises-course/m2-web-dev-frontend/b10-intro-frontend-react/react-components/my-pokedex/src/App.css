@@ -10,7 +10,7 @@
 .pokemon {
   height: auto;
   width: 400px;
-  border: 2px solid;
+  border: 3px solid;
   margin: 25px;
   transition: all 500ms;
   border-radius: 10px;
@@ -71,7 +71,3 @@ h1 {
 
 }
 
-.Normal {
-  border: 3px solid;
-  transition: all 500ms;
-}
