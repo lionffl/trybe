@@ -1,0 +1,16 @@
+.App {
+ margin: 20px;
+}
+
+.form-container {
+  display: flex;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: auto;
+  justify-content: space-between;
+  padding: 20px;
+}
