@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+
+  state = {
+    user: undefined,
+  }
+
+  fetchUser = async () => {
+    const endPoint = 'https://api.randomuser.me/'
+    const response = await fetch(endPoint)
+    const responseJson = await response.json();
+    this.setState({ user: responseJson.results[0] });
+    console.log(this.state.user)
+  }
+
+  componentDidMount() {
+    this.fetchUser();
+  }
+  
+  render() {
+    const { user } = this.state;
+    return (
+      <div className="App">
+       {user.name}
+      </div>
+    );
+  }
+
 }
 
 export default App;
