@@ -74,7 +74,6 @@ const fs = require('fs').promises;
 
 // Exercise 6
 
-
 const main = async () => {
   const simpsonsFamily = await fs.readFile('./simpsonsFamily.json', 'utf-8');
   const simpsonsFamilyJSON = JSON.parse(simpsonsFamily);
