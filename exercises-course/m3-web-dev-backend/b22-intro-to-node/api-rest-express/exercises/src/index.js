@@ -52,5 +52,20 @@ app.get('/filter/myActivities', (req, res) => {
 
 });
 
-
+app.get('/search/myActivities', (req, res) => {
+  const { q } = req.query;
+  let response = activities;
+  
+  function search(string) {
+    const array = string.toLocaleLowerCase().split(" ");
+    return array.includes(q.toLocaleLowerCase());
+  }
+  
+  if (q) {
+    response = activities.filter(({ description }) => search(description))
+  }
+  res
+    .status(200)
+    .json({ activities: response });
+});
 
