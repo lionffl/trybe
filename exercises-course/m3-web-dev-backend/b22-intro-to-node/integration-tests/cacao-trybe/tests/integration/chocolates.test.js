@@ -92,4 +92,38 @@ describe('Testando a API Cacao Trybe', function () {
       expect(response.body).to.deep.equal(output);
     });
   });
+
+  describe('Usando o método GET em /chocolates/search retornar os chocolates com a palavra pesquisada', function () {
+    it('Retorna os chocolates de id 3 e 4 se buscado pela palavra Mo', async function () {
+      const response = await chai
+        .request(app)
+        .get('/chocolates/search?name=Mo');
+
+      const output = [
+        {
+          "id": 3,
+          "name": "Mon Chéri",
+          "brandId": 2
+        },
+        {
+          "id": 4,
+          "name": "Mounds",
+          "brandId": 3
+        }
+      ];
+
+      expect(response.status).to.be.equal(200);
+      expect(response.body).to.deep.equal(output);
+    });
+    it('Retorna status 404 e um array vazio se a palavra buscada for inexistente', async function () {
+      const response = await chai
+        .request(app)
+        .get('/chocolates/search?name=asdfaskjnjna');
+
+      const output = [];
+
+      expect(response.status).to.be.equal(404);
+      expect(response.body).to.deep.equal(output);
+    });
+  });
 });
