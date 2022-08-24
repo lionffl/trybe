@@ -5,13 +5,11 @@ const app = express();
 
 app.get('/chocolates/search', async (req, res) => {
   const { name } = req.query;
-  let chocolates = await cacaoTrybe.getAllChocolates();
+  const chocolates = await cacaoTrybe.getChocolatesByName(name); 
   
-  if (name) {
-    chocolates = await cacaoTrybe.getChocolatesByName(name); 
-    if (chocolates.length > 0) res.status(200).json(chocolates);
-    if (chocolates.length === 0) res.status(404).json([]);
-  }
+  if (chocolates.length > 0) res.status(200).json(chocolates);
+  if (chocolates.length === 0) res.status(404).json([]);
+
 });
 
 app.get('/chocolates/total', async (req, res) => {

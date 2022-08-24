@@ -81,8 +81,6 @@ describe('Testando a API Cacao Trybe', function () {
       const response = await chai
         .request(app)
         .get('/chocolates/total');
-      
-      console.log("status", response.body);
 
       const output = {
         "totalChocolates": 4
