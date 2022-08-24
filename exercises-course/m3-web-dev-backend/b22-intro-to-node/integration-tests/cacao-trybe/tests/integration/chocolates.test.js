@@ -75,4 +75,21 @@ describe('Testando a API Cacao Trybe', function () {
       expect(response.body.chocolates).to.deep.equal(output);
     });
   });
+
+  describe('Usando o método GET em /chocolates/total retornar a quantidade de tipos de chocolates', function () {
+    it('Retorna a quantidade igual a 4', async function () {
+      const response = await chai
+        .request(app)
+        .get('/chocolates/total');
+      
+      console.log("status", response.body);
+
+      const output = {
+        "totalChocolates": 4
+      };
+
+      expect(response.status).to.be.equal(200);
+      expect(response.body).to.deep.equal(output);
+    });
+  });
 });
