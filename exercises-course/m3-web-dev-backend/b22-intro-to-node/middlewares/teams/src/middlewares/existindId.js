@@ -1,6 +1,6 @@
 const existingId = (req, res, next) => {
   const { id } = req.params;
-  const thisIdExist = teams.find((team) => team.id === Number(id));
+  const thisIdExist = require('../data/teams').find((team) => team.id === Number(id));
   if (thisIdExist){
     next();
   } else {
