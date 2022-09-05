@@ -6,6 +6,6 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_USER: root
+      MYSQL_DATABASE: todolistdb
     ports:
-      - 5000:5000
+      - "5000:3306"
