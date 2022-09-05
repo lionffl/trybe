@@ -6,5 +6,4 @@ app.use(express.json());
 
 app.use('/people', peopleRoutes);
 
-
 module.exports = app;

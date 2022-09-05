@@ -1,5 +1,7 @@
 const {
   insert,
+  findAll,
+  findById,
 } = require('../db/peopleDB');
 
 const createPerson = async (req, res) => {
@@ -7,7 +9,6 @@ const createPerson = async (req, res) => {
   
   try {
     const [ result ] = await insert(person);
-    console.log(result);
     res.status(201).json({
       message: `Pessoa cadastrada com sucesso com o id ${result.insertId}` 
     });
@@ -19,10 +20,32 @@ const createPerson = async (req, res) => {
 };
 
 const getPeople = async (req, res) => {
-  res.status(200).send('people');
+  try {
+    const [result] = await findAll();
+    res.status(200).json(result);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: err.sqlMessage });
+  }
+};
+
+const getPersonById = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const [[result]] = await findById(id);
+    if (result) {
+      res.status(200).json(result);
+    } else {
+      res.status(404).json({ message: 'Pessoa não encontrada' });
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ message: err.sqlMessage });
+  }
 };
 
 module.exports = {
   createPerson,
   getPeople,
+  getPersonById,
 }
