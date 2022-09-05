@@ -21,7 +21,7 @@ const createPerson = async (req, res) => {
   }
 };
 
-const getPeople = async (_req, res) => {
+const getPeople = async (req, res) => {
   try {
     const [result] = await findAll();
     res.status(200).json(result);
