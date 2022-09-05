@@ -7,7 +7,7 @@ const {
   updateTask,
   deleteTask,
   getTasks,
-  getTaskByid,
+  getTaskById,
 } = require('../controller/taskController');
 
 router.post('/', createTask);
@@ -18,6 +18,6 @@ router.delete('/:id', deleteTask);
 
 router.get('/', getTasks);
 
-router.get('/:id', getTaskByid);
+router.get('/:id', getTaskById);
 
 module.exports = router;

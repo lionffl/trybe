@@ -7,13 +7,11 @@ const port = process.env.API_PORT;
 const start = async () => {
 
   try {
-    const [ result ] = await connection.execute('SELECT 1');
-    if (result) {
-      app.listen(port, async () => {
+    app.listen(port, async () => {
+      await connection.execute('SELECT 1');
       console.log('DB is connected.');
-      console.log(`Tasks Manager API está sendo executada na porta ${port}`);
-      });
-    }
+      console.log(`API Todo List Manager is running on ${port}`);
+    })
   } catch (error) {
     console.log(error);
   }
