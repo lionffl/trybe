@@ -1,11 +1,10 @@
 version: '3'
-
 services:
-  db:
+  database:
     image: mysql:8.0.29
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: todolistdb
+      MYSQL_DATABASE: trybecashdb
     ports:
-      - "5000:3306"
+      - "33060:3306"
