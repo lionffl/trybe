@@ -2,24 +2,22 @@ const express = require('express');
 
 const router = express.Router();
 
-router.post('/', (req, res) => {
-  res.status(400).json({ message: 'O endpoint POST /tasks ainda não foi implementado' });
-});
+const { 
+  createTask,
+  updateTask,
+  deleteTask,
+  getTasks,
+  getTaskByid,
+} = require('../controller/taskController');
 
-router.put('/:id', (req, res) => {
-  res.status(400).json({ message: 'O endpoint PUT /tasks/:id ainda não foi implementado' });
-});
+router.post('/', createTask);
 
-router.delete('/:id', (req, res) => {
-  res.status(400).json({ message: 'O endpoint DELETE /tasks/:id ainda não foi implementado' });
-});
+router.put('/:id', updateTask);
 
-router.get('/', (req, res) => {
-  res.status(400).json({ message: 'O endpoint GET /tasks ainda não foi implementado' });
-});
+router.delete('/:id', deleteTask);
 
-router.get('/:id', (req, res) => {
-  res.status(400).json({ message: 'O endpoint GET /tasks/:id ainda não foi implementado' });
-});
+router.get('/', getTasks);
+
+router.get('/:id', getTaskByid);
 
 module.exports = router;
