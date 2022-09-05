@@ -1,11 +1,10 @@
 const app = require('./app');
-const connection = require('../src/db/connection');
+const connection = require('./db/connection');
 require('dotenv').config();
 
 const port = process.env.API_PORT;
 
 const start = async () => {
-
   try {
     app.listen(port, async () => {
       await connection.execute('SELECT 1');

@@ -1,14 +1,14 @@
-const conn = require('./connection');
+const conn = require('../db/connection');
 
 const insert = (task) => {
-  conn.execute(
+  return conn.execute(
     `INSERT INTO tasks (nome, descricao) VALUES (?, ?)`, 
     [task.nome, task.descricao]
   )
 };
 
 const update = (task, id) => {
-  conn.execute(
+  return conn.execute(
     `UPDATE tasks
     SET nome = ?, descricao = ?
     WHERE id = ?
@@ -18,7 +18,7 @@ const update = (task, id) => {
 };
 
 const remove = (id) => {
-  conn.execute(
+  return conn.execute(
     `
     DELETE FROM tasks
     WHERE id = ?
@@ -28,7 +28,7 @@ const remove = (id) => {
 };
 
 const findAllTasks = () => {
-  conn.execute(
+  return conn.execute(
     `
     SELECT * FROM tasks
     `
@@ -36,7 +36,7 @@ const findAllTasks = () => {
 };
 
 const findTaskById = (id) => {
-  conn.execute(
+  return conn.execute(
     `
     SELECT * FROM tasks WHERE id = ?
     `,

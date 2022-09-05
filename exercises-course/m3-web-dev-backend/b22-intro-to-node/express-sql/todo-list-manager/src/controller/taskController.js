@@ -4,47 +4,73 @@ const {
   remove,
   findAllTasks,
   findTaskById,
-} = require('../../src/db/taskDB');
+} = require('../models/tasks');
 
 const createTask = async (req, res) => {
   try {
     const task = req.body;
-    const [ result ] = await insert(task);
-    res.status(201).req(`Tarefa cadastrada com sucesso. ID ${result.insertId}`)
+    const [result] = await insert(task);
+    res.status(201).json({ success: true, message: `Tarefa cadastrada com sucesso. ID ${result.insertId}`})
   } catch (error) {
     console.log(error);
-    res.status(500).json({ message: 'Erro ao cadastrar uma task' })
-  }  
+    res.status(500).json({ success: false, message: 'Erro ao cadastrar uma task' })
+  }
 };
 
 const updateTask = async (req, res) => {
   const task = req.body;
   const { id } = req.params;
   try {
-    const [ result ] = await update(task, id);
+    const [result] = await update(task, id);
     if (result.affectedRows > 0) {
-      res.status(201).json({ message: `Task com id ${id} atualizada com sucesso` })
+      res.status(201).json({ success: true, message: `Task com id ${id} atualizada com sucesso` })
     } else {
-      res.status(404).json({ message: 'Task nao encontrada.'})
+      res.status(404).json({ success: false, message: 'Task nao encontrada.'})
     }
   } catch (error) {
     console.log(error);
     res.status(500).json({ message: error.sqlMessage })
   }
-
-  res.status(400).json({ message: 'O endpoint PUT /tasks/:id ainda não foi implementado' });
 };
 
 const deleteTask = async (req, res) => {
-  res.status(400).json({ message: 'O endpoint DELETE /tasks/:id ainda não foi implementado' });
+  try {
+    const { id } = req.params;
+    const [result] = await remove(id);
+    if (result.affectedRows > 0) {
+      res.status(201).json({ success: true, message: `Task com o id ${id} foi removida com sucesso` });
+    } else {
+      res.status(404).json({ success: false, message: 'Task nao encontrada.'})
+    }
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.sqlMessage })
+  }
 };
 
 const getTasks = async (req, res) => {
-  res.status(400).json({ message: 'O endpoint GET /tasks ainda não foi implementado' });
+  try {
+    const [ result ] = await findAllTasks();
+    res.status(200).json({ success: true, data: [...result] });
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.sqlMessage })
+  }
 };
 
 const getTaskById = async (req, res) => {
-  res.status(400).json({ message: 'O endpoint GET /tasks/:id ainda não foi implementado' });
+  try {
+    const { id } = req.params;
+    const [ result ] = await findTaskById(id);
+    if (result) {
+      res.status(200).json({ success: true, data: [...result] });
+    } else {
+      res.status(404).json({ success: false, message: 'Task nao encontrada.'})
+    } 
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ message: error.sqlMessage })
+  }
 };
 
 module.exports = {
