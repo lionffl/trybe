@@ -10,10 +10,24 @@ const create = (newBook) => {
     author: newBook.author,
     pageQuantity: newBook.pageQuantity,
   });
-}
+};
+
+const update = (id, editedBook) => {
+  return Book.update({
+    title: editedBook.title,
+    author: editedBook.author,
+    pageQuantity: editedBook.pageQuantity,
+  }, { where: { id } })
+};
+
+const destroy = (id) => Book.destroy({
+  where: { id }
+});
 
 module.exports = {
   getAll,
   getById,
   create,
+  update,
+  destroy,
 };

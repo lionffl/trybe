@@ -8,6 +8,9 @@ route.route('/')
   .get(BooksController.getAll)
   .post(BooksController.create);
 
-route.route('/:id').get(BooksController.getById);
+route.route('/:id')
+  .get(BooksController.getById)
+  .put(BooksController.update)
+  .delete(BooksController.destroy);
 
 module.exports = route;
