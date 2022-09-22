@@ -1,8 +1,15 @@
 const { Book }  = require('../models');
+const { Op } = require("sequelize");
 
 const getAll = () => Book.findAll();
 
 const getById = (id) => Book.findByPk(id);
+
+const getByAuthor = (author) => Book.findAll({
+  where: { 
+    author: { [Op.substring]: author } 
+  }
+});
 
 const create = (newBook) => {
   return Book.create({
@@ -27,6 +34,7 @@ const destroy = (id) => Book.destroy({
 module.exports = {
   getAll,
   getById,
+  getByAuthor,
   create,
   update,
   destroy,

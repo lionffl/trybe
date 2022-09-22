@@ -25,6 +25,18 @@ const getById = async (req, res) => {
   }
 };
 
+const getByAuthor = async (req, res) => {
+  const { author } = req.query;
+  try {
+    const book = await BooksService.getByAuthor(author);
+    if (!book) return res.status(404).json({ message: notFoundError })
+    res.status(200).json({ success: true, data: book })
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({ success: false, message: genericError })
+  }
+};
+
 const create = async (req, res) => {
 const newBook = req.body;
   try {
@@ -67,6 +79,7 @@ const destroy = async (req, res) => {
 module.exports = {
   getAll,
   getById,
+  getByAuthor,
   create,
   update,
   destroy,

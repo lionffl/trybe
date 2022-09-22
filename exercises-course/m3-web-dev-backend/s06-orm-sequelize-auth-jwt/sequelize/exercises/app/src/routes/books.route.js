@@ -4,6 +4,8 @@ const route = express.Router();
 
 const BooksController = require('../controllers/books.controller'); 
 
+route.route('/search').get(BooksController.getByAuthor);
+
 route.route('/')
   .get(BooksController.getAll)
   .post(BooksController.create);
