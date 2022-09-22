@@ -7,6 +7,7 @@ module.exports = {
         {
           title: 'Digital Fortress',
           author: 'Dan Brown',
+          publisher: 'Transworld',
           page_quantity: 350,
           created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
           updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),
@@ -14,6 +15,7 @@ module.exports = {
         {
           title: 'Deception Point',
           author: 'Dan Brown',
+          publisher: 'Transworld',
           page_quantity: 400,
           created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
           updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),
@@ -21,6 +23,7 @@ module.exports = {
         {
           title: 'Angels and Demons',
           author: 'Dan Brown',
+          publisher: 'Transworld',
           page_quantity: 394,
           created_at: Sequelize.literal('CURRENT_TIMESTAMP'),
           updated_at: Sequelize.literal('CURRENT_TIMESTAMP'),

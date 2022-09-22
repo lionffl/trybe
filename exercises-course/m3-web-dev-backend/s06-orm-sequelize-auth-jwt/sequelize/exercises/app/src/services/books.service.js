@@ -16,6 +16,7 @@ const create = (newBook) => {
   return Book.create({
     title: newBook.title,
     author: newBook.author,
+    publisher: newBook.publisher,
     pageQuantity: newBook.pageQuantity,
   });
 };
@@ -24,6 +25,7 @@ const update = (id, editedBook) => {
   return Book.update({
     title: editedBook.title,
     author: editedBook.author,
+    publisher: newBook.publisher,
     pageQuantity: editedBook.pageQuantity,
   }, { where: { id } })
 };
