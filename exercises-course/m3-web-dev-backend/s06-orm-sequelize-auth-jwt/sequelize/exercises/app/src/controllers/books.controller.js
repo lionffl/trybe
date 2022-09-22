@@ -3,10 +3,25 @@ const BooksService = require('../services/books.service');
 const genericError = 'Something is wrong.';
 const notFoundError = 'Book not found.';
 
-const getAll = async (_req, res) => {
+const getByAuthor = async (req, res) => {
+  const { author } = req.query;
   try {
+    const book = await BooksService.getByAuthor(author);
+    if (book.length === 0) return res.status(404).json({ message: notFoundError })
+    res.status(200).json({ success: true, data: book })
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).json({ success: false, message: genericError })
+  }
+};
+
+const getAll = async (req, res, next) => {
+  const { author } = req.query;
+  try {
+    if (!author) {
     const books = await BooksService.getAll();
     res.status(200).json({ success: true, data: books });
+    } else { next() }
   } catch (error) {
     console.error(error.message);
     res.status(500).json({ success: false, message: genericError })
@@ -17,18 +32,6 @@ const getById = async (req, res) => {
   const { id } = req.params;
   try {
     const book = await BooksService.getById(id);
-    if (!book) return res.status(404).json({ message: notFoundError })
-    res.status(200).json({ success: true, data: book })
-  } catch (error) {
-    console.error(error.message);
-    res.status(500).json({ success: false, message: genericError })
-  }
-};
-
-const getByAuthor = async (req, res) => {
-  const { author } = req.query;
-  try {
-    const book = await BooksService.getByAuthor(author);
     if (!book) return res.status(404).json({ message: notFoundError })
     res.status(200).json({ success: true, data: book })
   } catch (error) {

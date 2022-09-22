@@ -1,11 +1,12 @@
 const { Book }  = require('../models');
 const { Op } = require("sequelize");
 
-const getAll = () => Book.findAll();
+const getAll = () => Book.findAll({ order: [['title', 'ASC']]});
 
 const getById = (id) => Book.findByPk(id);
 
 const getByAuthor = (author) => Book.findAll({
+  order: [['title', 'ASC']],
   where: { 
     author: { [Op.substring]: author } 
   }
