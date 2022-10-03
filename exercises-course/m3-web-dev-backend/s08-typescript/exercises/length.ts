@@ -1,8 +1,8 @@
-interface Units {
+type Units = {
   [index: string]: number;
 }
 
-interface Operations {
+type Operations = {
   [index: string]: number;
 }
 
