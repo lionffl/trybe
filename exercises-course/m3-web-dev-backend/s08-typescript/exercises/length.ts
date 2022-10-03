@@ -25,6 +25,10 @@ function convert(value: number, baseUnit: string, unitToConvert: string) {
   }
 
   const factor: number = operations[operation];
- 
-  return factor * value;
+  
+  const result = factor * value;
+  
+  console.log(result);
+  
+  return result;
 }

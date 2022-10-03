@@ -1,6 +1,8 @@
-type Character = any;
+type Stats = {
+  [index: string]: number;
+}
 
-const characters: { nickname: string, class: string, stats: object, createdAt: Date }[] = [
+const characters: { nickname: string, class: string, stats: Stats, createdAt: Date }[] = [
   {
     nickname: 'xKillerx',
     class: 'warrior',
