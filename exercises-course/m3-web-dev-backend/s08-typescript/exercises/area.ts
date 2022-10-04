@@ -1,12 +1,12 @@
-function convertLength(value: number, baseUnit: string, unitToConvert: string) {
+function convertArea(value: number, baseUnit: string, unitToConvert: string) {
   const units: Units = {
-    'km': 1000,
-    'hm': 100,
-    'dam': 10,
-    'm': 1,
-    'dm': 0.1,
-    'cm': 0.01,
-    'mm': 0.001,
+    'km2': 1000000,
+    'hm2': 10000,
+    'dam2': 100,
+    'm2': 1,
+    'dm2': 0.01,
+    'cm2': 0.0001,
+    'mm2': 0.000001,
   };
 
   const operation: string = units[baseUnit] > units[unitToConvert] ? 'multiply' : 'divide';
@@ -18,11 +18,11 @@ function convertLength(value: number, baseUnit: string, unitToConvert: string) {
 
   const factor: number = operations[operation];
   
-  const result: number = factor * value;
+  const result: number = (factor * value) / 100;
   
   console.log(result);
   
   return result;
 }
 
-convertLength(1, 'km', 'm');
+convertArea(1, 'hm2', 'm2');
