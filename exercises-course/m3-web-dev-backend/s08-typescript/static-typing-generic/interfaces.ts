@@ -19,6 +19,10 @@ interface Aircraft {
 
 interface Cat extends Feline {
   name: string
+  meow(): string
+}
+
+interface Kitty extends Cat, Feline {
   play(): string
 }
 
@@ -31,7 +35,7 @@ const car1: Car = {
 
 const cat1: Cat = {
   name: 'Dinha',
-  play: function (): string {
+  meow: function (): string {
     return `${this.name} is playing`
   },
   race: 'persa',
