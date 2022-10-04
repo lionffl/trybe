@@ -9,7 +9,7 @@ function convertLength(value: number, baseUnit: string, unitToConvert: string) {
     'mm': 0.001,
   };
 
-  const operation: string = units[baseUnit] > units[unitToConvert] ? 'multiply' : 'divide';
+  const operation = units[baseUnit] > units[unitToConvert] && units[baseUnit] > 1 ? 'multiply' : 'divide';
 
   const operations: Operations = {
     'multiply': units[baseUnit] * units[unitToConvert],
@@ -25,4 +25,4 @@ function convertLength(value: number, baseUnit: string, unitToConvert: string) {
   return result;
 }
 
-convertLength(1, 'km', 'm');
+convertLength(1, 'm', 'mm');

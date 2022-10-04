@@ -1,12 +1,12 @@
-function convertArea(value: number, baseUnit: string, unitToConvert: string) {
+function convertCapacity(value: number, baseUnit: string, unitToConvert: string) {
   const units: Units = {
-    'km2': 1000000,
-    'hm2': 10000,
-    'dam2': 100,
-    'm2': 1,
-    'dm2': 0.01,
-    'cm2': 0.0001,
-    'mm2': 0.000001,
+    'kl': 1000,
+    'hl': 100,
+    'dal2': 10,
+    'l': 1,
+    'dl': 0.1,
+    'cl': 0.01,
+    'ml': 0.001,
   };
 
   const operation = units[baseUnit] > units[unitToConvert] && units[baseUnit] > 1 ? 'multiply' : 'divide';
@@ -25,4 +25,4 @@ function convertArea(value: number, baseUnit: string, unitToConvert: string) {
   return result;
 }
 
-convertArea(1, 'hm2', 'm2');
+convertCapacity(1, 'l', 'ml');

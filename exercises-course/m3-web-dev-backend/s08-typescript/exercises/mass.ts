@@ -9,7 +9,7 @@ function convertMass(value: number, baseUnit: string, unitToConvert: string) {
     'mg': 0.001,
   };
 
-  const operation: string = units[baseUnit] > units[unitToConvert] ? 'multiply' : 'divide';
+  const operation = units[baseUnit] > units[unitToConvert] && units[baseUnit] > 1 ? 'multiply' : 'divide';
 
   const operations: Operations = {
     'multiply': units[baseUnit] * units[unitToConvert],
