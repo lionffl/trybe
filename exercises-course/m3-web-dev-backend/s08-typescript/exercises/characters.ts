@@ -1,7 +1,3 @@
-type Stats = {
-  [index: string]: number;
-}
-
 const characters: { nickname: string, class: string, stats: Stats, createdAt: Date }[] = [
   {
     nickname: 'xKillerx',

@@ -1,12 +1,12 @@
-function convertLength(value: number, baseUnit: string, unitToConvert: string) {
+function convertMass(value: number, baseUnit: string, unitToConvert: string) {
   const units: Units = {
-    'km': 1000,
-    'hm': 100,
-    'dam': 10,
-    'm': 1,
-    'dm': 0.1,
-    'cm': 0.01,
-    'mm': 0.001,
+    'kg': 1000,
+    'hg': 100,
+    'dag': 10,
+    'g': 1,
+    'dg': 0.1,
+    'cg': 0.01,
+    'mg': 0.001,
   };
 
   const operation: string = units[baseUnit] > units[unitToConvert] ? 'multiply' : 'divide';
@@ -25,4 +25,4 @@ function convertLength(value: number, baseUnit: string, unitToConvert: string) {
   return result;
 }
 
-convertLength(1, 'km', 'm');
+convertMass(1, 'kg', 'g');
