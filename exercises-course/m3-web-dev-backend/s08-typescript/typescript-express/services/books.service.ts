@@ -39,6 +39,14 @@ class BookService {
     }
     this.model.remove(id);
   }
+
+  public async patch(id: number, attribute: string, value: string | number) {
+    const bookFound = await this.model.getById(id);
+    if (!bookFound) {
+      throw new NotFoundError('NotFoundError');
+    }
+    return this.model.patch(id, attribute, value);
+  }
 }
 
 export default BookService;

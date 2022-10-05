@@ -38,6 +38,13 @@ class BooksController {
     await this.bookService.remove(id);
     res.status(statusCodes.OK).json({ message: 'Book deleted successfully' });
   };
+
+  public patch = async (req: Request, res: Response) => {
+    const id = Number(req.params.id);
+    const { attribute, value } = req.body;
+    await this.bookService.patch(id, attribute, value);
+    res.status(statusCodes.NO_CONTENT).end();
+  };
 }
 
 export default BooksController;

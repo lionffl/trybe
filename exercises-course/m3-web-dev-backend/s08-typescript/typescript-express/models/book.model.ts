@@ -49,4 +49,11 @@ export default class BookModel {
       [id],
     );
   }
+
+  public async patch(id: number, attribute: string, value: string | number) {
+    await this.connection.execute(
+      'UPDATE books SET ?=? WHERE id=?',
+      [attribute, value, id],
+    );
+  }
 }
