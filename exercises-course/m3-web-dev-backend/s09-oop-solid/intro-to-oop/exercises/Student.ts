@@ -1,10 +1,10 @@
 import { createVerify } from "crypto";
 
 export default class Student {
-  _matricula: number;
-  _nome: string;
-  _notasProvas: number[];
-  _notasTrabalhos: number[];
+  private _matricula: number;
+  private _nome: string;
+  private _notasProvas: number[];
+  private _notasTrabalhos: number[];
 
   constructor(matricula: number, nome: string, notasProvas: number[], notasTrabalhos: number[]) {
     this._matricula = matricula;
