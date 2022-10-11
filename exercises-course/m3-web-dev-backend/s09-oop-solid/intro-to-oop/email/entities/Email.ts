@@ -15,6 +15,14 @@ class Email {
   get subject() {
     return this._subject
   }
+
+  get from() {
+    return this._from
+  }
+
+  get to() {
+    return this._to
+  }
   
   set subject(subject: string) {
     if (subject.length > 20) {

@@ -1,4 +1,4 @@
-import Email from "./Email";
+import Email  from "./Email";
 
 class Maillist {
   emails: Email[];
