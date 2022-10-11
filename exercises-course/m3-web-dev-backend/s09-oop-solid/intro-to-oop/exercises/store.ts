@@ -60,7 +60,7 @@ export class Order {
   }
 
   set discount(discount: number) {
-    if (discount <= 0) this._discount = 0;
+    if (discount <= 0 || !this._hasDiscount) this._discount = 0;
     if (discount >= 1) this._discount = 1;
     else this._discount = discount;
   }
