@@ -1,5 +1,3 @@
-import { throws } from "assert";
-
 class Person {
   name: string;
   address: string;
