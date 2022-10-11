@@ -1,83 +1,83 @@
-class Client {
-  private _nome: string;
+export class Client {
+  private _name: string;
 
-  constructor(nome: string) {
-    this._nome = nome;
+  constructor(name: string) {
+    this._name = name;
   }
 
-  get nome() {
-    return this._nome;
-  }
-}
-
-class Item {
-  private _nome: string;
-  private _preco: number;
-  
-  constructor(nome: string, preco: number) {
-    this._nome = nome;
-    this._preco = preco;
-  }
-
-  get nome() {
-    return this._nome;
-  }
-
-  get preco() {
-    return this._preco;
+  get name() {
+    return this._name;
   }
 }
 
-class Order {
-  private _cliente: Client;
-  private _consumo: Item[];
-  private _pagamento: string;
-  private _temDesconto: boolean;
-  private _desconto: number;
-
-  constructor(cliente: Client, pagamento: string, temDesconto: boolean, desconto: number) {
-    this._consumo = [];
-    this._desconto = 0;
-    this._cliente = cliente;
-    this._temDesconto = temDesconto;
-    this._pagamento = pagamento;
-    this.desconto = desconto;
-  }
-  get cliente() {
-    return this._cliente;
-  }
-
-  get consumo() {
-    return this._consumo;
-  }
-
-  get desconto() {
-    return this._desconto;
-  }
-
-  set desconto(desconto: number) {
-    if (desconto <= 0) this._desconto = 0;
-    if (desconto >= 1) this._desconto = 1;
-    else this._desconto = desconto;
-  }
+export class Item {
+  private _name: string;
+  private _price: number;
   
-  get pagamento() {
-    return this._pagamento;
+  constructor(name: string, price: number) {
+    this._name = name;
+    this._price = price;
+  }
+
+  get name() {
+    return this._name;
+  }
+
+  get price() {
+    return this._price;
+  }
+}
+
+export class Order {
+  private _client: Client;
+  private _consumption: Item[];
+  private _method: string;
+  private _hasDiscount: boolean;
+  private _discount: number;
+
+  constructor(client: Client, method: string, hasDiscount: boolean, discount: number) {
+    this._consumption = [];
+    this._discount = 0;
+    this._client = client;
+    this._hasDiscount = hasDiscount;
+    this._method = method;
+    this.discount = discount;
+  }
+  get client() {
+    return this._client;
+  }
+
+  get consumption() {
+    return this._consumption;
+  }
+
+  get method() {
+    return this._method;
+  }
+
+  get discount() {
+    return this._discount;
+  }
+
+  set discount(discount: number) {
+    if (discount <= 0) this._discount = 0;
+    if (discount >= 1) this._discount = 1;
+    else this._discount = discount;
   }
 
   public addItem(item: Item) {
-    this._consumo.push(item);
+    this._consumption.push(item);
   }
 
-  public getTotalNoDiscount() {
-    const prices: number[] = this._consumo.map((item) => item.preco);
+  public getTotalWithNoDiscount() {
+    const prices: number[] = this._consumption.map((item) => item.price);
     return prices.reduce((pV, cV) => pV + cV, 0)
   }
 
   public getTotalWithDiscount() {
-    const prices: number[] = this._consumo.map((item) => item.preco);
+    const prices: number[] = this._consumption.map((item) => item.price);
     const total = prices.reduce((pV, cV) => pV + cV, 0);
-    const result = (1 - this._desconto) * total;
+    const result = (1 - this._discount) * total;
     return result;
   }
 }
