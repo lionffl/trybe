@@ -38,7 +38,3 @@ const db2 = new ExampleDatabase(log2);
 
 db1.save('felipe', 'gg');
 db2.save('geo', 'op');
-
-
-
-
