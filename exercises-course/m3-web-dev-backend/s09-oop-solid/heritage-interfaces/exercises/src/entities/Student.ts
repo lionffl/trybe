@@ -1,12 +1,13 @@
-export default class Student {
+import Person from "./Person";
+
+export default class Student extends Person {
   private _matricula: number;
-  private _nome: string;
   private _notasProvas: number[];
   private _notasTrabalhos: number[];
 
-  constructor(matricula: number, nome: string, notasProvas: number[], notasTrabalhos: number[]) {
+  constructor(matricula: number, name: string, birthDate: Date, notasProvas: number[], notasTrabalhos: number[]) {
+    super(name, birthDate);
     this._matricula = matricula;
-    this._nome = nome;
     this._notasProvas = notasProvas;
     this._notasTrabalhos = notasTrabalhos;
   }
