@@ -1,15 +1,14 @@
-import Person from "./Person";
-import IEmployee from "../interfaces/Employee";
+import Employee from "./Employee";
 
 
-export default class Teacher extends Person implements IEmployee {
+export default class Teacher extends Employee{
   registration: number;
   salary: number;
   admissionDate: Date;
   subject: string;
   
   constructor(name: string, birthDate: Date, registration: number, salary: number, admissionDate: Date, subject: string) {
-    super(name, birthDate)
+    super(registration, salary, name, birthDate, admissionDate);
     this.registration = registration;
     this.admissionDate = admissionDate;
     this.salary = salary;
