@@ -1,5 +1,7 @@
 // ./src/index.ts
 
+import progressNotification from './progressNotification';
+
 type Discipline = {
   name: string;
   grade: number;
@@ -58,6 +60,8 @@ function setApproved(students: Student[]): void {
     .filter(approvedStudents)
     .map(updateApprovalData);
 }
+
+progressNotification('teste', 'Email');
 
 export {
   percentageGradesIntoLetters,
