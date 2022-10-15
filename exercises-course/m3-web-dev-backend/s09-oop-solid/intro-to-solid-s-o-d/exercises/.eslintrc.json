@@ -18,6 +18,7 @@
       "@typescript-eslint/no-unused-vars": ["error"],
       "no-shadow": "off",
       "@typescript-eslint/no-shadow": "error",
+      "no-underscore-dangle": "off",
       "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }]
   }
 }
