@@ -1,6 +1,6 @@
 import express from 'express';
-import plants from './routes';
+import routes from './routes/index';
 
 const app = express();
 
-app.use(plants);
+app.use(routes);

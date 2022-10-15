@@ -10,3 +10,5 @@ routes.use('/plants', plants);
 routes.use('/plant', plant);
 
 routes.use('/sunny', sunny);
+
+export default routes;
