@@ -1,12 +1,12 @@
-import { Router } from 'express';
+// import { Router } from 'express';
 
-const plant = Router();
+// const plant = Router();
 
-plant.route('/plant/:id')
-  .get(getPlantById)
-  .delete(deletePlantaById)
-  .put(updatePlantById);
+// plant.route('/plant/:id')
+//   .get(getPlantById)
+//   .delete(deletePlantaById)
+//   .put(updatePlantById);
 
-plant.post('/plant', createPlant);
+// plant.post('/plant', createPlant);
 
-export default plant;
+// export default plant;

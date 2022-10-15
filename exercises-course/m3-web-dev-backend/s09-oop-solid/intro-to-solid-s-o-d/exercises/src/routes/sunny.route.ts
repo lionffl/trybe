@@ -1,7 +1,7 @@
-import { Router } from 'express';
+// import { Router } from 'express';
 
-const sunny = Router();
+// const sunny = Router();
 
-sunny.get('/:id', getPlantThatNeedsSunById);
+// sunny.get('/:id', getPlantThatNeedsSunById);
 
-export default sunny;
+// export default sunny;

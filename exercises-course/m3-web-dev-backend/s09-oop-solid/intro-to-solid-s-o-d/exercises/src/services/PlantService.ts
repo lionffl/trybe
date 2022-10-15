@@ -4,12 +4,6 @@ import IOpsInfo from '../interfaces/IOpsInfo';
 import IPlant from '../interfaces/IPlants';
 
 class PlantService extends Plants {
-  public async getPlants(): Promise<IPlant[]> {
-    const plantsRaw = await fs.readFile(this.plantsFile, { encoding: 'utf8' });
-    const plants: IPlant[] = JSON.parse(plantsRaw);
-    return plants;
-  }
-
   public async getPlantById(
     id: string,
   ): Promise<IPlant | null> {
@@ -34,21 +28,6 @@ class PlantService extends Plants {
     await fs.writeFile(this.plantsFile, JSON.stringify(newPlants));
 
     return removedPlant;
-  }
-
-  public async getPlantsThatNeedsSunWithId(
-    id: string,
-  ): Promise<IPlant[]> {
-    const plantsRaw = await fs.readFile(this.plantsFile, { encoding: 'utf8' });
-    const plants: IPlant[] = JSON.parse(plantsRaw);
-
-    const filteredPlants = plants.filter((plant) =>
-      plant.id === id
-      && plant.needsSun
-      && (!plant.specialCare
-        || plant.specialCare.waterFrequency > 2));
-
-    return filteredPlants;
   }
 
   public async editPlant(
