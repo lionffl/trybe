@@ -8,7 +8,8 @@ class PlantsController {
       const plants = await PlantsService.getPlants();
       res.status(200).json(plants);
     } catch (error: unknown) {
-      res.status(500).json(error);
+      const { message } = error as Error;
+      res.status(500).json(message);
     }
   }
 }
