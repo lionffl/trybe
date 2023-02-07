@@ -11,19 +11,19 @@ def get_html_reader():
 
 def get_main_news():
     soup = get_html_reader() 
-    main_news = soup.find_all('a', class_="feed-post-link")
-    result = list()
+    main_news_html = soup.find_all('a', class_="feed-post-link")
+    main_news = list()
     
-    for news in main_news:
-        news_title = news.text
-        news_link = news['href']
+    for each_news in main_news_html:
+        news_title = each_news.text
+        news_link = each_news['href']
   
-        entry = {
+        news = {
           "title": news_title,
           "link": news_link,
         }
         
-        result.append(entry)
+        main_news.append(news)
       
-    return result 
+    return main_news 
 
